@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-07-12T12:50:10 IST" name="Default suite" finished-at="2023-07-12T12:50:43 IST" duration-ms="33107">
+    <groups>
+    </groups>
+    <test started-at="2023-07-12T12:50:10 IST" name="Default test" finished-at="2023-07-12T12:50:43 IST" duration-ms="33107">
+      <class name="userloveAdmin.login.Login">
+        <test-method is-config="true" signature="preSetup()[pri:0, instance:userloveAdmin.login.Login@7b9a4292]" started-at="2023-07-12T12:50:10 IST" name="preSetup" finished-at="2023-07-12T12:50:10 IST" duration-ms="393" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetup -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:userloveAdmin.login.Login@7b9a4292]" started-at="2023-07-12T12:50:10 IST" name="setup" finished-at="2023-07-12T12:50:25 IST" duration-ms="15121" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyUserloginwithcorrectCredentials()[pri:0, instance:userloveAdmin.login.Login@7b9a4292]" started-at="2023-07-12T12:50:26 IST" name="verifyUserloginwithcorrectCredentials" finished-at="2023-07-12T12:50:42 IST" duration-ms="16289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserloginwithcorrectCredentials -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:userloveAdmin.login.Login@7b9a4292]" started-at="2023-07-12T12:50:42 IST" name="afterMethod" finished-at="2023-07-12T12:50:42 IST" duration-ms="312" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserloginwithcorrectCredentials status=SUCCESS method=Login.verifyUserloginwithcorrectCredentials()[pri:0, instance:userloveAdmin.login.Login@7b9a4292] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:userloveAdmin.login.Login@7b9a4292]" started-at="2023-07-12T12:50:42 IST" name="cleanUp" finished-at="2023-07-12T12:50:43 IST" duration-ms="1307" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method is-config="true" signature="postCleanUp()[pri:0, instance:userloveAdmin.login.Login@7b9a4292]" started-at="2023-07-12T12:50:44 IST" name="postCleanUp" finished-at="2023-07-12T12:50:44 IST" duration-ms="758" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCleanUp -->
+      </class> <!-- userloveAdmin.login.Login -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
