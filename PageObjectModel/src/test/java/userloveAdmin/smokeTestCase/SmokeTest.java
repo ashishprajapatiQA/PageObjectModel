@@ -39,5 +39,32 @@ public class SmokeTest extends BaseTest {
 
 	}
 
+	@Test(priority = 1)
+	public void verifySureyPage() throws Exception {
+		// TC001
+		extentTest = extent.createTest("TC-001 - verify Survey page");
+		extentTest.log(Status.INFO, "Start Testcase - TC-001 - verify Survey page");		
+		
+		homePage.Survey();
+		
+		extentTest.log(Status.INFO, "User Login  Successfully");		
+		
+		//Assert.assertTrue(result);
+
+	}
+	
+	@Test(priority = 2)
+	public void verifyChecklistPage() throws Exception {
+		// TC001
+		extentTest = extent.createTest("TC-001 - verify Checklist page");
+		extentTest.log(Status.INFO, "Start Testcase - TC-001 -  verify Checklist page ");		
+		
+		homePage.Survey();
+		
+		extentTest.log(Status.INFO, "User Login  Successfully");		
+		
+		//Assert.assertTrue(result);
+
+	}
 	
 }

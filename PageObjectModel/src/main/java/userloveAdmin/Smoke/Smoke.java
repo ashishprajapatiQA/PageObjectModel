@@ -48,12 +48,17 @@ public class Smoke extends BasePage {
 
 	@FindBy(xpath = "/html/body/div/div/div[1]/div[2]/button/div[2]/span[2]")
 	private WebElement loggedinUserEmailatProfile;
-	
+
 	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[2]/div[1]")
 	private WebElement l;
-    
-	
 
+	@FindBy(xpath = "/html/body/div/div/div[2]/div[1]/div/div/div[1]/a[4]")
+	private WebElement SurveyPageLink;
+	
+	@FindBy(xpath = "/html/body/div/div/div[2]/div[1]/div/div/div[1]/a[3]")
+	private WebElement ChecklistPageLink;
+	 
+	 
 	public Smoke(WebDriver driver) {
 		super(driver); // make it super due to BasePage class have also same parameterized constructor
 						// overloaded
@@ -74,16 +79,42 @@ public class Smoke extends BasePage {
 
 		elementControl.clickElement(userButton);
 		WaitUtils.waitForSeconds(10);
-		
+
 		javascriptControl.scrollToElement(l);
-		
-		
 
 	}
 
 	public String verifyLoggedInUserEmailatProfile() throws Exception {
 		WaitUtils.waitForSeconds(1);
 		return loggedinUserEmailatProfile.getText();
+	}
+
+	public void Survey() throws Exception {
+		WaitUtils.waitForSeconds(2);
+		elementControl.clickElement(SurveyPageLink);
+		WaitUtils.waitForSeconds(5);
+	}
+
+	public void Checklist() throws Exception {
+		WaitUtils.waitForSeconds(2);
+		elementControl.clickElement(ChecklistPageLink);
+		WaitUtils.waitForSeconds(5);
+	}
+
+	public void Tour(String username, String password) throws Exception {
+
+	}
+
+	public void User(String username, String password) throws Exception {
+
+	}
+
+	public void Event(String username, String password) throws Exception {
+
+	}
+
+	public void Setting(String username, String password) throws Exception {
+
 	}
 
 }
