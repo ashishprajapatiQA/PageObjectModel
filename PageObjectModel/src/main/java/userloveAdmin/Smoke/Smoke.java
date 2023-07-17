@@ -1,7 +1,12 @@
-package userloveAdmin.login;
+package userloveAdmin.Smoke;
 
+import java.sql.Driver;
 import java.util.Properties;
 
+import javax.swing.text.Document;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,7 +19,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import commonLibs.implementation.ScreenshotControl;
 import commonLibs.utils.WaitUtils;
 
-public class LoginPage extends BasePage {
+public class Smoke extends BasePage {
 
 	// configuration file data fetch
 	static String configFileName;
@@ -43,11 +48,13 @@ public class LoginPage extends BasePage {
 
 	@FindBy(xpath = "/html/body/div/div/div[1]/div[2]/button/div[2]/span[2]")
 	private WebElement loggedinUserEmailatProfile;
+	
+	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[2]/div[1]")
+	private WebElement l;
+    
+	
 
-	@FindBy(xpath = "/html/body/div/div/div/div[2]/div/div[2]/form/div[3]/p")
-	private WebElement ForgotPassLink;
-
-	public LoginPage(WebDriver driver) {
+	public Smoke(WebDriver driver) {
 		super(driver); // make it super due to BasePage class have also same parameterized constructor
 						// overloaded
 		PageFactory.initElements(driver, this); // static method takes the driver instance of the given class and the
@@ -67,17 +74,16 @@ public class LoginPage extends BasePage {
 
 		elementControl.clickElement(userButton);
 		WaitUtils.waitForSeconds(10);
+		
+		javascriptControl.scrollToElement(l);
+		
+		
 
 	}
 
 	public String verifyLoggedInUserEmailatProfile() throws Exception {
 		WaitUtils.waitForSeconds(1);
 		return loggedinUserEmailatProfile.getText();
-	}
-
-	public boolean DuetoInvalidCredentialForgottpwdLinkcome() throws Exception {
-		boolean isElementTrue = ForgotPassLink.isDisplayed() && ForgotPassLink.isEnabled();
-		return isElementTrue;
 	}
 
 }

@@ -3,16 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="userloveAdmin.MercuryTravelTestcases">
+      <class name="userloveAdmin.smokeTestCase.SmokeTest">
         <methods>
           <include name="afterMethod"/>
           <include name="setup"/>
+          <include name="cleanUp"/>
           <include name="preSetup"/>
           <include name="postCleanUp"/>
-          <include name="cleanUp"/>
           <include name="verifyUserloginwithcorrectCredentials"/>
         </methods>
-      </class> <!-- userloveAdmin.MercuryTravelTestcases -->
+      </class> <!-- userloveAdmin.smokeTestCase.SmokeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

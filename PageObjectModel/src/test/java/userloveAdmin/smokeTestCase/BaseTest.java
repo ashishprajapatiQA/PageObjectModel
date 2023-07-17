@@ -1,4 +1,4 @@
-package userloveAdmin.loginTestCase;
+package userloveAdmin.smokeTestCase;
 
 import java.util.Properties;
 
@@ -19,7 +19,7 @@ import commonLibs.implementation.CommonDriver;
 import commonLibs.implementation.ScreenshotControl;
 import commonLibs.utils.ConfigFileUtils;
 import commonLibs.utils.DateUtils;
-import userloveAdmin.login.LoginPage;
+import userloveAdmin.Smoke.*;
 
 public class BaseTest {
 
@@ -30,7 +30,7 @@ public class BaseTest {
 	CommonDriver cmnDriver;
 	String browserType;
 	String baseUrl;
-	LoginPage homePage;
+	Smoke homePage;
 	private WebDriver driver;
 
 	// configuration file data fetch
@@ -122,7 +122,7 @@ public class BaseTest {
 	private void initializeReports() {
 		// TODO Auto-generated method stub
 		// report code
-		reportFilename = String.format("%s/reports/UserLoveAdminLogin-%s.html", currentWorkingDirectory,
+		reportFilename = String.format("%s/reports/UserLoveAdminSmoke-%s.html", currentWorkingDirectory,
 				executionStartDate);
 		htmlReporter = new ExtentHtmlReporter(reportFilename);
 		extent = new ExtentReports();
@@ -153,7 +153,7 @@ public class BaseTest {
 
 	private void initializeApplicationPages() {
 
-		homePage = new LoginPage(driver);
+		homePage = new Smoke(driver);
 	}
 
 	private void initializeScreenshotVariable() {
