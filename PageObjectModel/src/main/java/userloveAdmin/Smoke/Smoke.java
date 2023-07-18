@@ -1,6 +1,7 @@
 package userloveAdmin.Smoke;
 
 import java.sql.Driver;
+import java.time.Duration;
 import java.util.Properties;
 
 import javax.swing.text.Document;
@@ -35,6 +36,8 @@ public class Smoke extends BasePage {
 	String reportFilename;
 
 	ScreenshotControl screenshotControl;
+
+	private WebDriver myVariable;
 	// Logic layer - what we perform step by step
 
 	@FindBy(xpath = "/html/body/div/div/div/div[2]/div/div[2]/form/div[1]/div/div/input")
@@ -54,17 +57,32 @@ public class Smoke extends BasePage {
 
 	@FindBy(xpath = "/html/body/div/div/div[2]/div[1]/div/div/div[1]/a[4]")
 	private WebElement SurveyPageLink;
-	
+
 	@FindBy(xpath = "/html/body/div/div/div[2]/div[1]/div/div/div[1]/a[3]")
 	private WebElement ChecklistPageLink;
-	 
-	 
+
+	@FindBy(xpath = "/html/body/div/div/div[2]/div[1]/div/div/div[1]/a[2]")
+	private WebElement TourPageLink;
+	
+	@FindBy(xpath = "/html/body/div/div/div[2]/div[1]/div/div/div[1]/a[5]")
+	private WebElement UserPageLink;
+
+	@FindBy(xpath = "/html/body/div/div/div[2]/div[1]/div/div/div[1]/a[6]")
+	private WebElement EventPageLink;
+	
+	@FindBy(xpath = "/html/body/div/div/div[2]/div[1]/div/div/div[1]/a[7]")
+	private WebElement ThemePageLink;
+	
+	@FindBy(xpath = "/html/body/div/div/div[2]/div[1]/div/div/div[2]/a")
+	private WebElement SettingPageLink;
+	
 	public Smoke(WebDriver driver) {
 		super(driver); // make it super due to BasePage class have also same parameterized constructor
 						// overloaded
 		PageFactory.initElements(driver, this); // static method takes the driver instance of the given class and the
 												// class type, and returns a Page Object with its fields fully
 												// initialized
+		myVariable = driver;
 
 	}
 
@@ -78,9 +96,10 @@ public class Smoke extends BasePage {
 		WaitUtils.waitForSeconds(2);
 
 		elementControl.clickElement(userButton);
-		WaitUtils.waitForSeconds(10);
+		WaitUtils.waitForSeconds(5);
 
 		javascriptControl.scrollToElement(l);
+		WaitUtils.waitForSeconds(3);
 
 	}
 
@@ -90,31 +109,41 @@ public class Smoke extends BasePage {
 	}
 
 	public void Survey() throws Exception {
-		WaitUtils.waitForSeconds(2);
+
 		elementControl.clickElement(SurveyPageLink);
 		WaitUtils.waitForSeconds(5);
 	}
 
 	public void Checklist() throws Exception {
-		WaitUtils.waitForSeconds(2);
+
 		elementControl.clickElement(ChecklistPageLink);
 		WaitUtils.waitForSeconds(5);
 	}
 
-	public void Tour(String username, String password) throws Exception {
+	public void Tour() throws Exception {
 
+		elementControl.clickElement(TourPageLink);
+		WaitUtils.waitForSeconds(5);
 	}
 
-	public void User(String username, String password) throws Exception {
-
+	public void User() throws Exception {
+		elementControl.clickElement(UserPageLink);
+		WaitUtils.waitForSeconds(5);
 	}
 
-	public void Event(String username, String password) throws Exception {
-
+	public void Event() throws Exception {
+		elementControl.clickElement(EventPageLink);
+		WaitUtils.waitForSeconds(5);
+	}
+	
+	public void Theme() throws Exception {
+		elementControl.clickElement(ThemePageLink);
+		WaitUtils.waitForSeconds(5);
 	}
 
-	public void Setting(String username, String password) throws Exception {
-
+	public void Setting() throws Exception {
+		elementControl.clickElement(SettingPageLink);
+		WaitUtils.waitForSeconds(5);
 	}
 
 }

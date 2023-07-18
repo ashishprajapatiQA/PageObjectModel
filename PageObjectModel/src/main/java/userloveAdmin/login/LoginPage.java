@@ -1,5 +1,6 @@
 package userloveAdmin.login;
 
+import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
@@ -30,6 +31,8 @@ public class LoginPage extends BasePage {
 	String reportFilename;
 
 	ScreenshotControl screenshotControl;
+	
+	private WebDriver mydriver;
 	// Logic layer - what we perform step by step
 
 	@FindBy(xpath = "/html/body/div/div/div/div[2]/div/div[2]/form/div[1]/div/div/input")
@@ -53,7 +56,7 @@ public class LoginPage extends BasePage {
 		PageFactory.initElements(driver, this); // static method takes the driver instance of the given class and the
 												// class type, and returns a Page Object with its fields fully
 												// initialized
-
+		mydriver = driver;
 	}
 
 	public void userLogin(String username, String password) throws Exception {
@@ -71,7 +74,8 @@ public class LoginPage extends BasePage {
 	}
 
 	public String verifyLoggedInUserEmailatProfile() throws Exception {
-		WaitUtils.waitForSeconds(1);
+		WaitUtils.waitTillElementVisiable(mydriver,loggedinUserEmailatProfile,Duration.ofMillis(10000));
+		WaitUtils.waitForSeconds(2);
 		return loggedinUserEmailatProfile.getText();
 	}
 
