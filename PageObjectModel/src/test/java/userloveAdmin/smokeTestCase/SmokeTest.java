@@ -1,11 +1,14 @@
 package userloveAdmin.smokeTestCase;
 
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
 
 public class SmokeTest extends BaseTest {
+	
+	
 
 	@Test(priority = 0)
 	public void verifyUserloginwithcorrectCredentials() throws Exception {
@@ -46,7 +49,7 @@ public class SmokeTest extends BaseTest {
 
 		homePage.Survey();
 
-		extentTest.log(Status.INFO, "User Login  Successfully");
+		extentTest.log(Status.INFO, "User Survey Successfully");
 
 		// Assert.assertTrue(result);
 
@@ -94,7 +97,7 @@ public class SmokeTest extends BaseTest {
 
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void verifyEventPage() throws Exception {
 		// TC001
 		extentTest = extent.createTest("TC-001 - verify Event page");
@@ -108,7 +111,7 @@ public class SmokeTest extends BaseTest {
 
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 6)
 	public void verifyThemePage() throws Exception {
 		// TC001
 		extentTest = extent.createTest("TC-001 - verify Theme page");
@@ -122,7 +125,7 @@ public class SmokeTest extends BaseTest {
 
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 7)
 	public void verifySettingPage() throws Exception {
 		// TC001
 		extentTest = extent.createTest("TC-001 - verify Setting page");

@@ -100,7 +100,10 @@ public class Smoke extends BasePage {
 
 		javascriptControl.scrollToElement(l);
 		WaitUtils.waitForSeconds(3);
-
+		
+		System.out.println("page getCurrentUrl" + myVariable.getTitle()); // Userlove | Dashboard
+		
+		
 	}
 
 	public String verifyLoggedInUserEmailatProfile() throws Exception {
@@ -112,38 +115,45 @@ public class Smoke extends BasePage {
 
 		elementControl.clickElement(SurveyPageLink);
 		WaitUtils.waitForSeconds(5);
+		System.out.println("page getCurrentUrl" + myVariable.getTitle());
 	}
 
 	public void Checklist() throws Exception {
 
 		elementControl.clickElement(ChecklistPageLink);
 		WaitUtils.waitForSeconds(5);
+		System.out.println("page getCurrentUrl" + myVariable.getTitle());
 	}
 
 	public void Tour() throws Exception {
 
 		elementControl.clickElement(TourPageLink);
 		WaitUtils.waitForSeconds(5);
+		System.out.println("page getCurrentUrl" + myVariable.getTitle());
 	}
 
 	public void User() throws Exception {
 		elementControl.clickElement(UserPageLink);
 		WaitUtils.waitForSeconds(5);
+		System.out.println("page getCurrentUrl" + myVariable.getTitle());
 	}
 
 	public void Event() throws Exception {
 		elementControl.clickElement(EventPageLink);
 		WaitUtils.waitForSeconds(5);
+		System.out.println("page getCurrentUrl" + myVariable.getTitle());
 	}
 	
 	public void Theme() throws Exception {
 		elementControl.clickElement(ThemePageLink);
 		WaitUtils.waitForSeconds(5);
+		System.out.println("page getCurrentUrl" + myVariable.getTitle());
 	}
 
 	public void Setting() throws Exception {
 		elementControl.clickElement(SettingPageLink);
 		WaitUtils.waitForSeconds(5);
+		System.out.println("page getCurrentUrl" + myVariable.getTitle());
 	}
 
 }
