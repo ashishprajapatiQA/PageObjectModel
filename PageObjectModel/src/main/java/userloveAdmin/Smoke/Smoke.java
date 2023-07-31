@@ -15,6 +15,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import commonLibs.implementation.ScreenshotControl;
@@ -63,19 +64,19 @@ public class Smoke extends BasePage {
 
 	@FindBy(xpath = "/html/body/div/div/div[2]/div[1]/div/div/div[1]/a[2]")
 	private WebElement TourPageLink;
-	
+
 	@FindBy(xpath = "/html/body/div/div/div[2]/div[1]/div/div/div[1]/a[5]")
 	private WebElement UserPageLink;
 
 	@FindBy(xpath = "/html/body/div/div/div[2]/div[1]/div/div/div[1]/a[6]")
 	private WebElement EventPageLink;
-	
+
 	@FindBy(xpath = "/html/body/div/div/div[2]/div[1]/div/div/div[1]/a[7]")
 	private WebElement ThemePageLink;
-	
+
 	@FindBy(xpath = "/html/body/div/div/div[2]/div[1]/div/div/div[2]/a")
 	private WebElement SettingPageLink;
-	
+
 	public Smoke(WebDriver driver) {
 		super(driver); // make it super due to BasePage class have also same parameterized constructor
 						// overloaded
@@ -100,10 +101,9 @@ public class Smoke extends BasePage {
 
 		javascriptControl.scrollToElement(l);
 		WaitUtils.waitForSeconds(3);
-		
+
 		System.out.println("page getCurrentUrl" + myVariable.getTitle()); // Userlove | Dashboard
-		
-		
+
 	}
 
 	public String verifyLoggedInUserEmailatProfile() throws Exception {
@@ -111,18 +111,34 @@ public class Smoke extends BasePage {
 		return loggedinUserEmailatProfile.getText();
 	}
 
+//----------------------------SURVEY CODE------------------------------------------
+
 	public void Survey() throws Exception {
 
 		elementControl.clickElement(SurveyPageLink);
 		WaitUtils.waitForSeconds(5);
-		System.out.println("page getCurrentUrl" + myVariable.getTitle());
+
 	}
+
+	public String SurveyPageTitle() throws Exception {
+		return myVariable.getTitle();
+	}
+
+	public String CreateSuvey() {
+
+		return "asd";
+	}
+
+//---------------------------------------------------------------------------------
 
 	public void Checklist() throws Exception {
 
 		elementControl.clickElement(ChecklistPageLink);
 		WaitUtils.waitForSeconds(5);
-		System.out.println("page getCurrentUrl" + myVariable.getTitle());
+	}
+
+	public String ChecklistPageTitle() throws Exception {
+		return myVariable.getTitle();
 	}
 
 	public void Tour() throws Exception {
@@ -143,7 +159,7 @@ public class Smoke extends BasePage {
 		WaitUtils.waitForSeconds(5);
 		System.out.println("page getCurrentUrl" + myVariable.getTitle());
 	}
-	
+
 	public void Theme() throws Exception {
 		elementControl.clickElement(ThemePageLink);
 		WaitUtils.waitForSeconds(5);

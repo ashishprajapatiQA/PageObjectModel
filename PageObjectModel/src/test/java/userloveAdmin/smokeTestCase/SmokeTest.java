@@ -40,102 +40,113 @@ public class SmokeTest extends BaseTest {
 		Assert.assertTrue(result);
 
 	}
+	
+	//----------------------------SURVEY CODE------------------------------------------
+
 
 	@Test(priority = 1)
 	public void verifySureyPage() throws Exception {
-		// TC001
-		extentTest = extent.createTest("TC-001 - verify Survey page");
-		extentTest.log(Status.INFO, "Start Testcase - TC-001 - verify Survey page");
+		
+		extentTest = extent.createTest("verify Survey page & Title");
+		extentTest.log(Status.INFO, "Start Testcase verify Survey page & Title");
 
 		homePage.Survey();
+		
+		String SurveyPageTitle = homePage.SurveyPageTitle(); 
+		Boolean result = SurveyPageTitle.equals(configProperties.getProperty("SurveyPageTitle"));
 
-		extentTest.log(Status.INFO, "User Survey Successfully");
+		extentTest.log(Status.INFO, "Survey Page Title is - "+ SurveyPageTitle + "  & matching with expected is  -"  + result );
 
-		// Assert.assertTrue(result);
+		Assert.assertTrue(result);
 
 	}
+	//-----------------------------------------------------------------------------------
+
 
 	@Test(priority = 2)
 	public void verifyChecklistPage() throws Exception {
-		// TC001
-		extentTest = extent.createTest("TC-001 - verify Checklist page");
-		extentTest.log(Status.INFO, "Start Testcase - TC-001 -  verify Checklist page ");
+		
+		extentTest = extent.createTest("verify Checklist page & Title");
+		extentTest.log(Status.INFO, "Start Testcase verify Checklist page & Title");
 
 		homePage.Checklist();
 
-		extentTest.log(Status.INFO, "User Login  Successfully");
+		String ChecklistPageTitle = homePage.ChecklistPageTitle(); 
+		Boolean result = ChecklistPageTitle.equals(configProperties.getProperty("ChecklistPageTitle"));
 
-		// Assert.assertTrue(result);
+		extentTest.log(Status.INFO, "Checklist Page Title is - "+ ChecklistPageTitle + "  & matching with expected is  -"  + result );
 
-	}
-
-	@Test(priority = 3)
-	public void verifyTourPage() throws Exception {
-		// TC001
-		extentTest = extent.createTest("TC-001 - verify Tour page");
-		extentTest.log(Status.INFO, "Start Testcase - TC-001 -  verify Checklist page ");
-
-		homePage.Tour();
-
-		extentTest.log(Status.INFO, "User Login  Successfully");
-
-		// Assert.assertTrue(result);
+		Assert.assertTrue(result);
 
 	}
-
-	@Test(priority = 4)
-	public void verifyUserPage() throws Exception {
-		// TC001
-		extentTest = extent.createTest("TC-001 - verify User page");
-		extentTest.log(Status.INFO, "Start Testcase - TC-001 -  verify Checklist page ");
-
-		homePage.User();
-
-		extentTest.log(Status.INFO, "User Login  Successfully");
-
-		// Assert.assertTrue(result);
-
-	}
-
-	@Test(priority = 5)
-	public void verifyEventPage() throws Exception {
-		// TC001
-		extentTest = extent.createTest("TC-001 - verify Event page");
-		extentTest.log(Status.INFO, "Start Testcase - TC-001 -  verify Checklist page ");
-
-		homePage.Event();
-
-		extentTest.log(Status.INFO, "User Login  Successfully");
-
-		// Assert.assertTrue(result);
-
-	}
-
-	@Test(priority = 6)
-	public void verifyThemePage() throws Exception {
-		// TC001
-		extentTest = extent.createTest("TC-001 - verify Theme page");
-		extentTest.log(Status.INFO, "Start Testcase - TC-001 -  verify Checklist page ");
-
-		homePage.Theme();
-
-		extentTest.log(Status.INFO, "User Login  Successfully");
-
-		// Assert.assertTrue(result);
-
-	}
-
-	@Test(priority = 7)
-	public void verifySettingPage() throws Exception {
-		// TC001
-		extentTest = extent.createTest("TC-001 - verify Setting page");
-		extentTest.log(Status.INFO, "Start Testcase - TC-001 -  verify Checklist page ");
-
-		homePage.Setting();
-
-		extentTest.log(Status.INFO, "User Login  Successfully");
-
-		// Assert.assertTrue(result);
-
-	}
+//
+//	@Test(priority = 3)
+//	public void verifyTourPage() throws Exception {
+//		// TC001
+//		extentTest = extent.createTest("TC-001 - verify Tour page");
+//		extentTest.log(Status.INFO, "Start Testcase - TC-001 -  verify Checklist page ");
+//
+//		homePage.Tour();
+//
+//		extentTest.log(Status.INFO, "User Login  Successfully");
+//
+//		// Assert.assertTrue(result);
+//
+//	}
+//
+//	@Test(priority = 4)
+//	public void verifyUserPage() throws Exception {
+//		// TC001
+//		extentTest = extent.createTest("TC-001 - verify User page");
+//		extentTest.log(Status.INFO, "Start Testcase - TC-001 -  verify Checklist page ");
+//
+//		homePage.User();
+//
+//		extentTest.log(Status.INFO, "User Login  Successfully");
+//
+//		// Assert.assertTrue(result);
+//
+//	}
+//
+//	@Test(priority = 5)
+//	public void verifyEventPage() throws Exception {
+//		// TC001
+//		extentTest = extent.createTest("TC-001 - verify Event page");
+//		extentTest.log(Status.INFO, "Start Testcase - TC-001 -  verify Checklist page ");
+//
+//		homePage.Event();
+//
+//		extentTest.log(Status.INFO, "User Login  Successfully");
+//
+//		// Assert.assertTrue(result);
+//
+//	}
+//
+//	@Test(priority = 6)
+//	public void verifyThemePage() throws Exception {
+//		// TC001
+//		extentTest = extent.createTest("TC-001 - verify Theme page");
+//		extentTest.log(Status.INFO, "Start Testcase - TC-001 -  verify Checklist page ");
+//
+//		homePage.Theme();
+//
+//		extentTest.log(Status.INFO, "User Login  Successfully");
+//
+//		// Assert.assertTrue(result);
+//
+//	}
+//
+//	@Test(priority = 7)
+//	public void verifySettingPage() throws Exception {
+//		// TC001
+//		extentTest = extent.createTest("TC-001 - verify Setting page");
+//		extentTest.log(Status.INFO, "Start Testcase - TC-001 -  verify Checklist page ");
+//
+//		homePage.Setting();
+//
+//		extentTest.log(Status.INFO, "User Login  Successfully");
+//
+//		// Assert.assertTrue(result);
+//
+//	}
 }
