@@ -39,6 +39,7 @@ public class Smoke extends BasePage {
 	ScreenshotControl screenshotControl;
 
 	private WebDriver myVariable;
+	boolean elementVisiables; 
 	// Logic layer - what we perform step by step
 
 	@FindBy(xpath = "/html/body/div/div/div/div[2]/div/div[2]/form/div[1]/div/div/input")
@@ -55,6 +56,11 @@ public class Smoke extends BasePage {
 
 	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[2]/div[1]")
 	private WebElement l;
+
+	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[1]/div/div[1]/div/div[1]")
+	
+	
+	private WebElement DashboardLabel;
 
 	@FindBy(xpath = "/html/body/div/div/div[2]/div[1]/div/div/div[1]/a[4]")
 	private WebElement SurveyPageLink;
@@ -84,6 +90,7 @@ public class Smoke extends BasePage {
 												// class type, and returns a Page Object with its fields fully
 												// initialized
 		myVariable = driver;
+		
 
 	}
 
@@ -97,11 +104,18 @@ public class Smoke extends BasePage {
 		WaitUtils.waitForSeconds(2);
 
 		elementControl.clickElement(userButton);
-		WaitUtils.waitForSeconds(5);
+		WaitUtils.waitForSeconds(8);
 
-		javascriptControl.scrollToElement(l);
-		WaitUtils.waitForSeconds(3);
+		elementVisiables = elementControl.isElementVisiable(DashboardLabel);
+		System.out.println("elementVisiables" +elementVisiables);
 
+		if(elementVisiables = true) {
+			javascriptControl.scrollToElement(l);
+			WaitUtils.waitForSeconds(3);
+	
+		} 
+
+		
 		System.out.println("page getCurrentUrl" + myVariable.getTitle()); // Userlove | Dashboard
 
 	}
@@ -116,7 +130,7 @@ public class Smoke extends BasePage {
 	public void Survey() throws Exception {
 
 		elementControl.clickElement(SurveyPageLink);
-		WaitUtils.waitForSeconds(5);
+		WaitUtils.waitForSeconds(10);
 
 	}
 
@@ -134,42 +148,69 @@ public class Smoke extends BasePage {
 	public void Checklist() throws Exception {
 
 		elementControl.clickElement(ChecklistPageLink);
-		WaitUtils.waitForSeconds(5);
+		WaitUtils.waitForSeconds(8);
 	}
 
 	public String ChecklistPageTitle() throws Exception {
 		return myVariable.getTitle();
 	}
 
+	// ---------------------------Tour------------------------------------------------
+
 	public void Tour() throws Exception {
 
 		elementControl.clickElement(TourPageLink);
-		WaitUtils.waitForSeconds(5);
-		System.out.println("page getCurrentUrl" + myVariable.getTitle());
+		WaitUtils.waitForSeconds(8);
+
 	}
+
+	public String TourPageTitle() throws Exception {
+		return myVariable.getTitle();
+	}
+
+	// -----------------------------------------------------------------------------------
 
 	public void User() throws Exception {
 		elementControl.clickElement(UserPageLink);
-		WaitUtils.waitForSeconds(5);
-		System.out.println("page getCurrentUrl" + myVariable.getTitle());
+		WaitUtils.waitForSeconds(8);
+
 	}
 
+	public String UsersPageTitle() throws Exception {
+		return myVariable.getTitle();
+	}
+
+	// ---------------Events--------------------------------------------------------------
 	public void Event() throws Exception {
 		elementControl.clickElement(EventPageLink);
-		WaitUtils.waitForSeconds(5);
-		System.out.println("page getCurrentUrl" + myVariable.getTitle());
+		WaitUtils.waitForSeconds(8);
+
 	}
+
+	public String EventsPageTitle() throws Exception {
+		return myVariable.getTitle();
+	}
+
+	// ------------------------------------------------------------------------------------
 
 	public void Theme() throws Exception {
 		elementControl.clickElement(ThemePageLink);
-		WaitUtils.waitForSeconds(5);
-		System.out.println("page getCurrentUrl" + myVariable.getTitle());
+		WaitUtils.waitForSeconds(10);
+
+	}
+
+	public String ThemePageTitle() throws Exception {
+		return myVariable.getTitle();
 	}
 
 	public void Setting() throws Exception {
 		elementControl.clickElement(SettingPageLink);
-		WaitUtils.waitForSeconds(5);
-		System.out.println("page getCurrentUrl" + myVariable.getTitle());
+		WaitUtils.waitForSeconds(8);
+
+	}
+
+	public String ProfilePageTitle() throws Exception {
+		return myVariable.getTitle();
 	}
 
 }
