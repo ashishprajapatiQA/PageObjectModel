@@ -59,6 +59,17 @@ public class SmokeTest extends BaseTest {
 		Assert.assertTrue(result);
 
 	}
+	
+	@Test(priority = 2)
+	public void verifyCreateSurvey() throws Exception {
+
+		extentTest = extent.createTest("verify create Survey");
+		extentTest.log(Status.INFO, "Start Testcase verify Create Survey");
+
+		homePage.CreateSuvey();		
+		
+
+	}
 	// -----------------------------------------------------------------------------------
 
 //	@Test(priority = 2)
@@ -78,7 +89,7 @@ public class SmokeTest extends BaseTest {
 //		Assert.assertTrue(result);
 //
 //	}
-//
+
 //	@Test(priority = 3)
 //	public void verifyTourPage() throws Exception {
 //		extentTest = extent.createTest("verify Tour page & Title");
@@ -163,12 +174,12 @@ public class SmokeTest extends BaseTest {
 //		Assert.assertTrue(result);
 //
 //	}
-	@Test(priority = 7)
-	public void verifySettingPage() throws Exception {
-		extentTest = extent.createTest("verify Logout");
-		extentTest.log(Status.INFO, "Start Testcase verify Logout");
-
-		homePage.Logout();	
-
-	}
+//	@Test(priority = 7)
+//	public void verifySettingPage() throws Exception {
+//		extentTest = extent.createTest("verify Logout");
+//		extentTest.log(Status.INFO, "Start Testcase verify Logout");
+//
+//		homePage.Logout();	
+//
+//	}
 }

@@ -89,6 +89,16 @@ public class Smoke extends BasePage {
 	@FindBy(xpath = "/html/body/div[2]/div[3]/div/button/span[1]")
 	private WebElement LogoutLink;
 	
+	//--------------------------create survey-----------------------------------------
+	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[1]/div/div[2]/div/div[1]/button")
+	private WebElement createsurveybtn;
+	
+	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[1]/div/div[2]/div/div[1]/div/div[4]/p[2]")
+	private WebElement addscratchbtn;
+	
+	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[1]/div/div[2]/div/div[1]/div/div[1]/div[1]/div/div/input")
+	private WebElement surveynametextbox;
+	
 	
 	
 	public Smoke(WebDriver driver) {
@@ -139,6 +149,8 @@ public class Smoke extends BasePage {
 
 		elementControl.clickElement(SurveyPageLink);
 		WaitUtils.waitForSeconds(10);
+		javascriptControl.scrollToElement(l);
+		WaitUtils.waitForSeconds(1);
 
 	}
 
@@ -146,9 +158,17 @@ public class Smoke extends BasePage {
 		return myVariable.getTitle();
 	}
 
-	public String CreateSuvey() {
-
-		return "asd";
+	public void CreateSuvey() throws Exception {
+		WaitUtils.waitForSeconds(1);
+		elementControl.clickElement(createsurveybtn);
+		WaitUtils.waitForSeconds(8);
+		elementControl.clickElement(addscratchbtn);
+		WaitUtils.waitForSeconds(3);
+		surveynametextbox.clear();	
+		
+		WaitUtils.waitForSeconds(5);
+		elementControl.setText(surveynametextbox, "Survey 12 template");		
+		
 	}
 
 //---------------------------------------------------------------------------------
@@ -157,6 +177,8 @@ public class Smoke extends BasePage {
 
 		elementControl.clickElement(ChecklistPageLink);
 		WaitUtils.waitForSeconds(8);
+		javascriptControl.scrollToElement(l);
+		WaitUtils.waitForSeconds(1);
 	}
 
 	public String ChecklistPageTitle() throws Exception {
@@ -169,6 +191,8 @@ public class Smoke extends BasePage {
 
 		elementControl.clickElement(TourPageLink);
 		WaitUtils.waitForSeconds(8);
+		javascriptControl.scrollToElement(l);
+		WaitUtils.waitForSeconds(1);
 
 	}
 
@@ -181,6 +205,8 @@ public class Smoke extends BasePage {
 	public void User() throws Exception {
 		elementControl.clickElement(UserPageLink);
 		WaitUtils.waitForSeconds(8);
+		javascriptControl.scrollToElement(l);
+		WaitUtils.waitForSeconds(1);
 
 	}
 
@@ -192,6 +218,8 @@ public class Smoke extends BasePage {
 	public void Event() throws Exception {
 		elementControl.clickElement(EventPageLink);
 		WaitUtils.waitForSeconds(8);
+		javascriptControl.scrollToElement(l);
+		WaitUtils.waitForSeconds(1);
 
 	}
 
