@@ -163,4 +163,12 @@ public class SmokeTest extends BaseTest {
 //		Assert.assertTrue(result);
 //
 //	}
+	@Test(priority = 7)
+	public void verifySettingPage() throws Exception {
+		extentTest = extent.createTest("verify Logout");
+		extentTest.log(Status.INFO, "Start Testcase verify Logout");
+
+		homePage.Logout();	
+
+	}
 }

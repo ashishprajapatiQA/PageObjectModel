@@ -82,7 +82,15 @@ public class Smoke extends BasePage {
 
 	@FindBy(xpath = "/html/body/div/div/div[2]/div[1]/div/div/div[2]/a")
 	private WebElement SettingPageLink;
+	
+	@FindBy(xpath = "/html/body/div[1]/div/div[1]/div[2]/button[2]/div[2]")
+	private WebElement ProfileLink;
 
+	@FindBy(xpath = "/html/body/div[2]/div[3]/div/button/span[1]")
+	private WebElement LogoutLink;
+	
+	
+	
 	public Smoke(WebDriver driver) {
 		super(driver); // make it super due to BasePage class have also same parameterized constructor
 						// overloaded
@@ -211,6 +219,14 @@ public class Smoke extends BasePage {
 
 	public String ProfilePageTitle() throws Exception {
 		return myVariable.getTitle();
+	}
+	
+	public void Logout() throws Exception {
+		elementControl.clickElement(ProfileLink);
+		WaitUtils.waitForSeconds(3);
+		elementControl.clickElement(LogoutLink);
+		WaitUtils.waitForSeconds(10);
+
 	}
 
 }
