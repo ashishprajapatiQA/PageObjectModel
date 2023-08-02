@@ -24,12 +24,12 @@ public class SmokeTest extends BaseTest {
 		extentTest.log(Status.INFO, "User Login  Successfully");
 
 		String verifyLoggedInUserEmailatProfile = homePage.verifyLoggedInUserEmailatProfile();
-		String loggedinEmail = configProperties.getProperty("userEmailId");
+		String loggedinEmail = configProperties.getProperty("afterloginprofiletext");
 
 		Boolean result = verifyLoggedInUserEmailatProfile.equals(loggedinEmail);
 
 		extentTest.log(Status.INFO, "UserEmail is -" + loggedinEmail);
-		extentTest.log(Status.INFO, "after loggedIn email is -" + verifyLoggedInUserEmailatProfile);
+		extentTest.log(Status.INFO, "after loggedIn profile text/email is -" + verifyLoggedInUserEmailatProfile);
 		extentTest.log(Status.INFO, "Matching is  -" + result);
 
 		System.out.println("verifyLoggedInUserEmailatProfile  " + verifyLoggedInUserEmailatProfile);
