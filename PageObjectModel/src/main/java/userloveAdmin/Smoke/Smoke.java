@@ -3,7 +3,8 @@ package userloveAdmin.Smoke;
 import java.sql.Driver;
 import java.time.Duration;
 import java.util.Properties;
-
+import java.util.Date;
+import java.text.SimpleDateFormat;
 import javax.swing.text.Document;
 
 import org.openqa.selenium.By;
@@ -203,6 +204,10 @@ public class Smoke extends BasePage {
 	}
 
 	public void CreateSuvey() throws Exception {
+		Date today = new Date();
+		SimpleDateFormat sdf3 = new SimpleDateFormat("MMMM dd, yyyy");
+        String formatDate = sdf3.format(today);
+		
 		WaitUtils.waitForSeconds(1);
 		elementControl.clickElement(createsurveybtn);
 		WaitUtils.waitForSeconds(5);
@@ -212,7 +217,7 @@ public class Smoke extends BasePage {
 
 		WaitUtils.waitForSeconds(2);
 		surveynametextbox.sendKeys(Keys.CONTROL, "a");
-		elementControl.setText(surveynametextbox, "Survey 12 template");
+		elementControl.setText(surveynametextbox, "Survey template " + formatDate);
 		WaitUtils.waitForSeconds(1);
 		elementControl.clickElement(addQuestionbutton);
 		elementControl.clickElement(surveytemplate1);
