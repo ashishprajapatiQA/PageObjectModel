@@ -21,20 +21,20 @@ public class SmokeTest extends BaseTest {
 
 		homePage.userLogin(username, password);// this pass value to logic layer page
 
-		extentTest.log(Status.INFO, "User Login  Successfully");
+		extentTest.log(Status.PASS, "User Login  Successfully");
 
 		String verifyLoggedInUserEmailatProfile = homePage.verifyLoggedInUserEmailatProfile();
 		String loggedinEmail = configProperties.getProperty("afterloginprofiletext");
 
 		Boolean result = verifyLoggedInUserEmailatProfile.equals(loggedinEmail);
+		if (result = true) {
+			extentTest.log(Status.PASS, "UserEmail is -" + loggedinEmail + "after loggedIn profile text/email is -"
+					+ verifyLoggedInUserEmailatProfile + "Matching is  -" + result);
+		} else {
+			extentTest.log(Status.FAIL, "UserEmail is -" + loggedinEmail + "after loggedIn profile text/email is -"
+					+ verifyLoggedInUserEmailatProfile + "Matching is  -" + result);
+		}
 
-		extentTest.log(Status.INFO, "UserEmail is -" + loggedinEmail);
-		extentTest.log(Status.INFO, "after loggedIn profile text/email is -" + verifyLoggedInUserEmailatProfile);
-		extentTest.log(Status.INFO, "Matching is  -" + result);
-
-		System.out.println("verifyLoggedInUserEmailatProfile  " + verifyLoggedInUserEmailatProfile);
-		System.out.println("loggedinEmail  " + loggedinEmail);
-		System.out.println("result  " + result);
 		Assert.assertTrue(result);
 
 	}
@@ -52,25 +52,28 @@ public class SmokeTest extends BaseTest {
 
 		String SurveyPageTitle = homePage.SurveyPageTitle();
 		Boolean result = SurveyPageTitle.equals(configProperties.getProperty("SurveyPageTitle"));
-
-		extentTest.log(Status.INFO,
-				"Survey Page Title is - " + SurveyPageTitle + "  & matching with expected is  -" + result);
+		if (result = true) {
+			extentTest.log(Status.PASS,
+					"Survey Page Title is - " + SurveyPageTitle + "  & matching with expected is  -" + result);
+		} else {
+			extentTest.log(Status.FAIL,
+					"Survey Page Title is - " + SurveyPageTitle + "  & matching with expected is  -" + result);
+		}
 
 		Assert.assertTrue(result);
 
 	}
-	
+
 	@Test(priority = 2)
 	public void verifyCreateSurvey() throws Exception {
 
 		extentTest = extent.createTest("verify create Survey");
 		extentTest.log(Status.INFO, "Start Testcase verify Create Survey");
 
-		homePage.CreateSuvey();		
-		
+		homePage.CreateSuvey();
 
 	}
-	// -----------------------------------------------------------------------------------
+//	 -----------------------------------------------------------------------------------
 
 //	@Test(priority = 2)
 //	public void verifyChecklistPage() throws Exception {
