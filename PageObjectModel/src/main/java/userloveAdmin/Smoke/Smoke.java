@@ -129,6 +129,9 @@ public class Smoke extends BasePage {
 
 	@FindBy(xpath = "/html/body/div[2]/div[3]/div[9]")
 	private WebElement surveytemplate9;
+	
+	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[1]/div/div[2]/div/div[1]/div/div[2]/div[9]/div/div/div/div/div/div/div/div/div[3]/div/div[3]/div[1]/div[1]/div/input")
+	private WebElement Targeturl;
 
 	@FindBy(xpath = "/html/body/div[2]/div[3]/div[10]")
 	private WebElement surveytemplate10;
@@ -189,7 +192,7 @@ public class Smoke extends BasePage {
 	public void Survey() throws Exception {
 
 		elementControl.clickElement(SurveyPageLink);
-		WaitUtils.waitForSeconds(10);
+		WaitUtils.waitForSeconds(3);
 		javascriptControl.scrollToElement(l);
 		WaitUtils.waitForSeconds(1);
 
@@ -238,6 +241,8 @@ public class Smoke extends BasePage {
 		elementControl.clickElement(addQuestionbutton);
 		elementControl.clickElement(surveytemplate9);
 		WaitUtils.waitForSeconds(1);
+		elementControl.setText(Targeturl, "https://www.userlove.io");
+		WaitUtils.waitForSeconds(1);
 		elementControl.clickElement(addQuestionbutton);
 		elementControl.clickElement(surveytemplate10);
 		WaitUtils.waitForSeconds(1);
@@ -246,11 +251,11 @@ public class Smoke extends BasePage {
 		WaitUtils.waitForSeconds(1);
 		elementControl.clickElement(addQuestionbutton);
 		elementControl.clickElement(surveytemplate12);
-		WaitUtils.waitForSeconds(1);
+		WaitUtils.waitForSeconds(5);
 		
 		elementControl.clickElement(continueBTN);
 
-		WaitUtils.waitForSeconds(3);
+		WaitUtils.waitForSeconds(5);
 	}
 
 //---------------------------------------------------------------------------------
