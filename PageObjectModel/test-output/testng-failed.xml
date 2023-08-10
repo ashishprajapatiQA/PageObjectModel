@@ -10,7 +10,9 @@
           <include name="cleanUp"/>
           <include name="preSetup"/>
           <include name="postCleanUp"/>
+          <include name="verifyCreateSurvey"/>
           <include name="verifyUserloginwithcorrectCredentials"/>
+          <include name="verifySureyPage"/>
         </methods>
       </class> <!-- userloveAdmin.smokeTestCase.SmokeTest -->
     </classes>
