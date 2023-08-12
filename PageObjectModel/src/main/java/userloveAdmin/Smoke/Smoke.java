@@ -8,10 +8,12 @@ import java.text.SimpleDateFormat;
 import javax.swing.text.Document;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.By.ById;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -130,7 +132,7 @@ public class Smoke extends BasePage {
 
 	@FindBy(xpath = "/html/body/div[2]/div[3]/div[9]")
 	private WebElement surveytemplate9;
-	
+
 	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[1]/div/div[2]/div/div[1]/div/div[2]/div[9]/div/div/div/div/div/div/div/div/div[3]/div/div[3]/div[1]/div[1]/div/input")
 	private WebElement Targeturl;
 
@@ -143,11 +145,34 @@ public class Smoke extends BasePage {
 	@FindBy(xpath = "/html/body/div[2]/div[3]/div[12]")
 	private WebElement surveytemplate12;
 
-	
 	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[1]/div/div[2]/div/div[2]/div/div/div[3]/button")
 	private WebElement continueBTN;
+
+	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[1]/div/div[2]/div/div[1]/div/div[2]/div[1]/div[1]/div/div/button")
+	private WebElement progresscolorpicker;
+
+	@FindBy(xpath = "/html/body/div[2]/div[3]/div/div[4]/div[3]/span/div")
+	private WebElement progresscolor;
+
+	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[1]/div/div[2]/div/div[1]/div/div[2]/div[1]/div[2]/div/div/button")
+	private WebElement modalcolorpicker;
+
+	@FindBy(xpath = "/html/body/div[2]/div[3]/div/div[4]/div[9]/span/div")
+	private WebElement modalcolor;
+
+	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[1]/div/div[2]/div/div[1]/div/div[2]/div[2]/div/div[2]/div/div/div/div/div/div[1]/div/button")
+	private WebElement backdropcolorpicker;
+
+	@FindBy(xpath = "/html/body/div[2]/div[3]/div/div[4]/div[5]/span/div")
+	private WebElement backdropcolor;
+
+	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[1]/div/div[2]/div/div[1]/div/div[2]/div[3]/div[7]")
+	private WebElement position;
 	
-	
+
+	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[1]/div/div[2]/div/div[2]/div/div/div[3]/button")
+	private WebElement continueBTND;
+
 	public Smoke(WebDriver driver) {
 		super(driver); // make it super due to BasePage class have also same parameterized constructor
 						// overloaded
@@ -206,8 +231,8 @@ public class Smoke extends BasePage {
 	public void CreateSuvey() throws Exception {
 		Date today = new Date();
 		SimpleDateFormat sdf3 = new SimpleDateFormat("MMMM dd, yyyy");
-        String formatDate = sdf3.format(today);
-		
+		String formatDate = sdf3.format(today);
+
 		WaitUtils.waitForSeconds(1);
 		elementControl.clickElement(createsurveybtn);
 		WaitUtils.waitForSeconds(5);
@@ -257,9 +282,43 @@ public class Smoke extends BasePage {
 		elementControl.clickElement(addQuestionbutton);
 		elementControl.clickElement(surveytemplate12);
 		WaitUtils.waitForSeconds(5);
-		
+
 		elementControl.clickElement(continueBTN);
 
+		WaitUtils.waitForSeconds(5);
+
+		elementControl.clickElement(modalcolorpicker);
+		WaitUtils.waitForSeconds(3);
+		Actions actions = new Actions(myVariable);
+		elementControl.clickElement(modalcolor);
+		actions = new Actions(myVariable);
+		WaitUtils.waitForSeconds(3);
+		actions.sendKeys(Keys.ESCAPE).perform();
+		WaitUtils.waitForSeconds(1);
+
+		Actions actionsprogress = new Actions(myVariable);
+		mouseControl.moveTOElementAndClick(progresscolorpicker);
+		WaitUtils.waitForSeconds(3);
+		elementControl.clickElement(progresscolor);
+		actionsprogress = new Actions(myVariable);
+		actionsprogress.sendKeys(Keys.ESCAPE).perform();
+		WaitUtils.waitForSeconds(3);
+
+		Actions actionsbackdrop = new Actions(myVariable);
+		mouseControl.moveTOElementAndClick(backdropcolorpicker);
+		WaitUtils.waitForSeconds(3);
+		elementControl.clickElement(backdropcolor);
+		actionsbackdrop = new Actions(myVariable);
+		actionsbackdrop.sendKeys(Keys.ESCAPE).perform();
+		WaitUtils.waitForSeconds(3);
+
+		elementControl.clickElement(position);
+		WaitUtils.waitForSeconds(3);
+		
+		
+		
+		
+		elementControl.clickElement(continueBTND);
 		WaitUtils.waitForSeconds(5);
 	}
 
