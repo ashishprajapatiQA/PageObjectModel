@@ -1,5 +1,6 @@
 package userloveAdmin.Smoke;
 
+import java.io.File;
 import java.sql.Driver;
 import java.time.Duration;
 import java.util.Properties;
@@ -168,7 +169,9 @@ public class Smoke extends BasePage {
 
 	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[1]/div/div[2]/div/div[1]/div/div[2]/div[3]/div[7]")
 	private WebElement position;
-	
+
+	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[1]/div/div[2]/div/div[1]/div/div[2]/div[4]/label")
+	private WebElement fileUpload;
 
 	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[1]/div/div[2]/div/div[2]/div/div/div[3]/button")
 	private WebElement continueBTND;
@@ -228,6 +231,7 @@ public class Smoke extends BasePage {
 		return myVariable.getTitle();
 	}
 
+	@SuppressWarnings("deprecation")
 	public void CreateSuvey() throws Exception {
 		Date today = new Date();
 		SimpleDateFormat sdf3 = new SimpleDateFormat("MMMM dd, yyyy");
@@ -247,40 +251,40 @@ public class Smoke extends BasePage {
 		elementControl.clickElement(addQuestionbutton);
 		elementControl.clickElement(surveytemplate1);
 		WaitUtils.waitForSeconds(1);
-		elementControl.clickElement(addQuestionbutton);
-		elementControl.clickElement(surveytemplate2);
-		WaitUtils.waitForSeconds(1);
-		elementControl.clickElement(addQuestionbutton);
-		elementControl.clickElement(surveytemplate3);
-		WaitUtils.waitForSeconds(1);
-		elementControl.clickElement(addQuestionbutton);
-		elementControl.clickElement(surveytemplate4);
-		WaitUtils.waitForSeconds(1);
-		elementControl.clickElement(addQuestionbutton);
-		elementControl.clickElement(surveytemplate5);
-		WaitUtils.waitForSeconds(1);
-		elementControl.clickElement(addQuestionbutton);
-		elementControl.clickElement(surveytemplate6);
-		WaitUtils.waitForSeconds(1);
-		elementControl.clickElement(addQuestionbutton);
-		elementControl.clickElement(surveytemplate7);
-		WaitUtils.waitForSeconds(1);
-		elementControl.clickElement(addQuestionbutton);
-		elementControl.clickElement(surveytemplate8);
-		WaitUtils.waitForSeconds(1);
-		elementControl.clickElement(addQuestionbutton);
-		elementControl.clickElement(surveytemplate9);
-		WaitUtils.waitForSeconds(1);
-		elementControl.setText(Targeturl, "https://www.userlove.io");
-		WaitUtils.waitForSeconds(1);
-		elementControl.clickElement(addQuestionbutton);
-		elementControl.clickElement(surveytemplate10);
-		WaitUtils.waitForSeconds(1);
-		elementControl.clickElement(addQuestionbutton);
-		elementControl.clickElement(surveytemplate11);
-		WaitUtils.waitForSeconds(1);
-		elementControl.clickElement(addQuestionbutton);
-		elementControl.clickElement(surveytemplate12);
+//		elementControl.clickElement(addQuestionbutton);
+//		elementControl.clickElement(surveytemplate2);
+//		WaitUtils.waitForSeconds(1);
+//		elementControl.clickElement(addQuestionbutton);
+//		elementControl.clickElement(surveytemplate3);
+//		WaitUtils.waitForSeconds(1);
+//		elementControl.clickElement(addQuestionbutton);
+//		elementControl.clickElement(surveytemplate4);
+//		WaitUtils.waitForSeconds(1);
+//		elementControl.clickElement(addQuestionbutton);
+//		elementControl.clickElement(surveytemplate5);
+//		WaitUtils.waitForSeconds(1);
+//		elementControl.clickElement(addQuestionbutton);
+//		elementControl.clickElement(surveytemplate6);
+//		WaitUtils.waitForSeconds(1);
+//		elementControl.clickElement(addQuestionbutton);
+//		elementControl.clickElement(surveytemplate7);
+//		WaitUtils.waitForSeconds(1);
+//		elementControl.clickElement(addQuestionbutton);
+//		elementControl.clickElement(surveytemplate8);
+//		WaitUtils.waitForSeconds(1);
+//		elementControl.clickElement(addQuestionbutton);
+//		elementControl.clickElement(surveytemplate9);
+//		WaitUtils.waitForSeconds(1);
+//		elementControl.setText(Targeturl, "https://www.userlove.io");
+//		WaitUtils.waitForSeconds(1);
+//		elementControl.clickElement(addQuestionbutton);
+//		elementControl.clickElement(surveytemplate10);
+//		WaitUtils.waitForSeconds(1);
+//		elementControl.clickElement(addQuestionbutton);
+//		elementControl.clickElement(surveytemplate11);
+//		WaitUtils.waitForSeconds(1);
+//		elementControl.clickElement(addQuestionbutton);
+//		elementControl.clickElement(surveytemplate12);
 		WaitUtils.waitForSeconds(5);
 
 		elementControl.clickElement(continueBTN);
@@ -314,10 +318,12 @@ public class Smoke extends BasePage {
 
 		elementControl.clickElement(position);
 		WaitUtils.waitForSeconds(3);
+
+	    mouseControl.moveTOElementAndClick(fileUpload); // its trigger the click	    
+	    Runtime.getRuntime().exec("C:\\Users\\Gainserv\\Desktop\\AUTOit\\fileupload.exe");
+	   
 		
-		
-		
-		
+		WaitUtils.waitForSeconds(5);
 		elementControl.clickElement(continueBTND);
 		WaitUtils.waitForSeconds(5);
 	}
