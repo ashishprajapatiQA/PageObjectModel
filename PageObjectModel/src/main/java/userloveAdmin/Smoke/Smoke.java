@@ -320,7 +320,7 @@ public class Smoke extends BasePage {
 		WaitUtils.waitForSeconds(3);
 
 	    mouseControl.moveTOElementAndClick(fileUpload); // its trigger the click	    
-	    Runtime.getRuntime().exec("C:\\Users\\Gainserv\\Desktop\\AUTOit\\fileupload.exe");
+	    Runtime.getRuntime().exec("C:\\Users\\Gainserv\\Desktop\\AUTOit\\fileupload.exe"+" "+"C:\\Users\\Gainserv\\Desktop\\AUTOit\\image1.jpg");
 	   
 		
 		WaitUtils.waitForSeconds(5);
