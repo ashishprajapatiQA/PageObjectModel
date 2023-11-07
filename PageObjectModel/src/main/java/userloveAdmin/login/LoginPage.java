@@ -57,8 +57,13 @@ public class LoginPage extends BasePage {
 												// class type, and returns a Page Object with its fields fully
 												// initialized
 		mydriver = driver;
+	
 	}
 
+	public WebDriver returndriver() throws Exception {
+		return mydriver;
+	}
+	
 	public void userLogin(String username, String password) throws Exception {
 		// this is logic layer for login functionality
 		// pass values to element to controls which we created to perform

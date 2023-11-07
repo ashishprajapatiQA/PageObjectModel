@@ -1,5 +1,6 @@
 package userloveAdmin.loginTestCase;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -21,8 +22,13 @@ public class LoginWithValidCredential extends BaseTest {
 		homePage.userLogin(username, password);// this pass value to logic layer page
 		extentTest.log(Status.INFO, "User Login  Successfully");
 
+		WebDriver driver = homePage.returndriver();
+		
+		extentTest.log(Status.INFO, "driver.getTitle();" + driver.getTitle());
+		
 		String verifyLoggedInUserEmailatProfile = homePage.verifyLoggedInUserEmailatProfile();
-		String loggedinEmail = configProperties.getProperty("userEmailId");
+		String loggedinEmail = configProperties.getProperty("afterloginprofiletext");
+		
 
 		Boolean result = verifyLoggedInUserEmailatProfile.equals(loggedinEmail);
 
