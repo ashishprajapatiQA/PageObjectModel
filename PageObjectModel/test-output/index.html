@@ -7,7 +7,7 @@
 
     <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
     <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,8 +21,7 @@
      -->
   </head>
 
-  <body>
-    <div class="top-banner-root">
+  <body>    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
@@ -51,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Gainserv\AppData\Local\Temp\testng-eclipse-1160561874\testng-customsuite.xml</span>
+                    <span>C:\Users\ashish.prajapati_gai\AppData\Local\Temp\testng-eclipse-677412754\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,17 +103,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="userloveAdmin.smokeTestCase.SmokeTest" class="method navigator-link" hash-for-method="verifyCreateSurvey">verifyCreateSurvey</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="userloveAdmin.smokeTestCase.SmokeTest" class="method navigator-link" hash-for-method="verifySureyPage">verifySureyPage</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="userloveAdmin.smokeTestCase.SmokeTest" class="method navigator-link" hash-for-method="verifyUserloginwithcorrectCredentials">verifyUserloginwithcorrectCredentials</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="userloveAdmin.loginTestCase.LoginWithValidCredential" class="method navigator-link" hash-for-method="verifyUserloginwithcorrectCredentials">verifyUserloginwithcorrectCredentials</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -132,23 +121,9 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">userloveAdmin.smokeTestCase.SmokeTest</span>
+              <span class="class-name">userloveAdmin.loginTestCase.LoginWithValidCredential</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyCreateSurvey">
-                  </a> <!-- verifyCreateSurvey -->
-                  <span class="method-name">verifyCreateSurvey</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifySureyPage">
-                  </a> <!-- verifySureyPage -->
-                  <span class="method-name">verifySureyPage</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="verifyUserloginwithcorrectCredentials">
@@ -161,7 +136,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Gainserv\AppData\Local\Temp\testng-eclipse-1160561874\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\ashish.prajapati_gai\AppData\Local\Temp\testng-eclipse-677412754\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -170,7 +145,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;userloveAdmin.smokeTestCase.SmokeTest&quot;/&gt;
+      &lt;class name=&quot;userloveAdmin.loginTestCase.LoginWithValidCredential&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -210,24 +185,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyCreateSurvey')
-data.setCell(0, 2, 'userloveAdmin.smokeTestCase.SmokeTest')
-data.setCell(0, 3, 45949);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyUserloginwithcorrectCredentials')
-data.setCell(1, 2, 'userloveAdmin.smokeTestCase.SmokeTest')
-data.setCell(1, 3, 23585);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifySureyPage')
-data.setCell(2, 2, 'userloveAdmin.smokeTestCase.SmokeTest')
-data.setCell(2, 3, 4304);
+data.setCell(0, 1, 'verifyUserloginwithcorrectCredentials')
+data.setCell(0, 2, 'userloveAdmin.loginTestCase.LoginWithValidCredential')
+data.setCell(0, 3, 16112);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -253,46 +220,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">userloveAdmin.smokeTestCase.SmokeTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">userloveAdmin.loginTestCase.LoginWithValidCredential</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">preSetup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">setup</span>
-                <span class="method-start">353 ms</span>
+                <span class="method-start">386 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyUserloginwithcorrectCredentials</span>
-                <span class="method-start">26414 ms</span>
+                <span class="method-start">22307 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=verifyUserloginwithcorrectCredentials status=SUCCESS method=SmokeTest.verifyUserlog...)</span>
-                <span class="method-start">50003 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">verifySureyPage</span>
-                <span class="method-start">50322 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=verifySureyPage status=SUCCESS method=SmokeTest.verifySureyPage()[pri:1, instance:u...)</span>
-                <span class="method-start">54638 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">verifyCreateSurvey</span>
-                <span class="method-start">54962 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=verifyCreateSurvey status=SUCCESS method=SmokeTest.verifyCreateSurvey()[pri:2, inst...)</span>
-                <span class="method-start">100915 ms</span>
+                <span class="method-name">afterMethod([TestResult name=verifyUserloginwithcorrectCredentials status=SUCCESS method=LoginWithValidCredentia...)</span>
+                <span class="method-start">38427 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">101155 ms</span>
+                <span class="method-start">38758 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <span class="method-name">postCleanUp</span>
-                <span class="method-start">105764 ms</span>
+                <span class="method-start">40173 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

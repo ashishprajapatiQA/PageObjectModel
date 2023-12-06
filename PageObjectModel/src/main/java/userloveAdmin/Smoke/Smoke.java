@@ -129,7 +129,7 @@ public class Smoke extends BasePage {
 	@FindBy(xpath = "/html/body/div[2]/div[3]/div[5]")
 	private WebElement surveytemplate5;
 
-	@FindBy(xpath = "/html/body/div[2]/div[3]/div[6]")
+	@FindBy(xpath = "/html/body/div[2]/div[3]/div[6]")	
 	private WebElement surveytemplate6;
 
 	@FindBy(xpath = "/html/body/div[2]/div[3]/div[7]")

@@ -3,18 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="userloveAdmin.smokeTestCase.SmokeTest">
+      <class name="userloveAdmin.loginTestCase.LoginWithValidCredential">
         <methods>
+          <include name="verifyUserloginwithcorrectCredentials"/>
           <include name="afterMethod"/>
           <include name="setup"/>
           <include name="cleanUp"/>
           <include name="preSetup"/>
           <include name="postCleanUp"/>
-          <include name="verifyCreateSurvey"/>
-          <include name="verifyUserloginwithcorrectCredentials"/>
-          <include name="verifySureyPage"/>
         </methods>
-      </class> <!-- userloveAdmin.smokeTestCase.SmokeTest -->
+      </class> <!-- userloveAdmin.loginTestCase.LoginWithValidCredential -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

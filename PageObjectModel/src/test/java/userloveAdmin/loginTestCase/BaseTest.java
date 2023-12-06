@@ -148,6 +148,7 @@ public class BaseTest {
 
 	private void getDriverInstance() throws Exception {
 		driver = cmnDriver.getDriver();
+		
 
 	}
 

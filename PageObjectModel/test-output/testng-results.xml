@@ -1,74 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-10T12:38:06 IST" name="Default suite" finished-at="2023-08-10T12:39:48 IST" duration-ms="101339">
+  <suite started-at="2023-11-07T15:08:29 IST" name="Default suite" finished-at="2023-11-07T15:09:09 IST" duration-ms="39767">
     <groups>
     </groups>
-    <test started-at="2023-08-10T12:38:06 IST" name="Default test" finished-at="2023-08-10T12:39:48 IST" duration-ms="101339">
-      <class name="userloveAdmin.smokeTestCase.SmokeTest">
-        <test-method is-config="true" signature="preSetup()[pri:0, instance:userloveAdmin.smokeTestCase.SmokeTest@4cc451f2]" started-at="2023-08-10T12:38:06 IST" name="preSetup" finished-at="2023-08-10T12:38:06 IST" duration-ms="315" status="PASS">
+    <test started-at="2023-11-07T15:08:29 IST" name="Default test" finished-at="2023-11-07T15:09:09 IST" duration-ms="39767">
+      <class name="userloveAdmin.loginTestCase.LoginWithValidCredential">
+        <test-method is-config="true" signature="preSetup()[pri:0, instance:userloveAdmin.loginTestCase.LoginWithValidCredential@815b41f]" started-at="2023-11-07T15:08:29 IST" name="preSetup" finished-at="2023-11-07T15:08:29 IST" duration-ms="340" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preSetup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:userloveAdmin.smokeTestCase.SmokeTest@4cc451f2]" started-at="2023-08-10T12:38:06 IST" name="setup" finished-at="2023-08-10T12:38:32 IST" duration-ms="26043" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:userloveAdmin.loginTestCase.LoginWithValidCredential@815b41f]" started-at="2023-11-07T15:08:30 IST" name="setup" finished-at="2023-11-07T15:08:51 IST" duration-ms="21907" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyUserloginwithcorrectCredentials()[pri:0, instance:userloveAdmin.smokeTestCase.SmokeTest@4cc451f2]" started-at="2023-08-10T12:38:32 IST" name="verifyUserloginwithcorrectCredentials" finished-at="2023-08-10T12:38:56 IST" duration-ms="23585" status="PASS">
+        <test-method signature="verifyUserloginwithcorrectCredentials()[pri:0, instance:userloveAdmin.loginTestCase.LoginWithValidCredential@815b41f]" started-at="2023-11-07T15:08:51 IST" name="verifyUserloginwithcorrectCredentials" finished-at="2023-11-07T15:09:08 IST" duration-ms="16112" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserloginwithcorrectCredentials -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:userloveAdmin.smokeTestCase.SmokeTest@4cc451f2]" started-at="2023-08-10T12:38:56 IST" name="afterMethod" finished-at="2023-08-10T12:38:56 IST" duration-ms="315" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:userloveAdmin.loginTestCase.LoginWithValidCredential@815b41f]" started-at="2023-11-07T15:09:08 IST" name="afterMethod" finished-at="2023-11-07T15:09:08 IST" duration-ms="328" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserloginwithcorrectCredentials status=SUCCESS method=SmokeTest.verifyUserloginwithcorrectCredentials()[pri:0, instance:userloveAdmin.smokeTestCase.SmokeTest@4cc451f2] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserloginwithcorrectCredentials status=SUCCESS method=LoginWithValidCredential.verifyUserloginwithcorrectCredentials()[pri:0, instance:userloveAdmin.loginTestCase.LoginWithValidCredential@815b41f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="verifySureyPage()[pri:1, instance:userloveAdmin.smokeTestCase.SmokeTest@4cc451f2]" started-at="2023-08-10T12:38:56 IST" name="verifySureyPage" finished-at="2023-08-10T12:39:00 IST" duration-ms="4304" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySureyPage -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:userloveAdmin.smokeTestCase.SmokeTest@4cc451f2]" started-at="2023-08-10T12:39:00 IST" name="afterMethod" finished-at="2023-08-10T12:39:01 IST" duration-ms="323" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifySureyPage status=SUCCESS method=SmokeTest.verifySureyPage()[pri:1, instance:userloveAdmin.smokeTestCase.SmokeTest@4cc451f2] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="verifyCreateSurvey()[pri:2, instance:userloveAdmin.smokeTestCase.SmokeTest@4cc451f2]" started-at="2023-08-10T12:39:01 IST" name="verifyCreateSurvey" finished-at="2023-08-10T12:39:47 IST" duration-ms="45949" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyCreateSurvey -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:userloveAdmin.smokeTestCase.SmokeTest@4cc451f2]" started-at="2023-08-10T12:39:47 IST" name="afterMethod" finished-at="2023-08-10T12:39:47 IST" duration-ms="239" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyCreateSurvey status=SUCCESS method=SmokeTest.verifyCreateSurvey()[pri:2, instance:userloveAdmin.smokeTestCase.SmokeTest@4cc451f2] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="cleanUp()[pri:0, instance:userloveAdmin.smokeTestCase.SmokeTest@4cc451f2]" started-at="2023-08-10T12:39:47 IST" name="cleanUp" finished-at="2023-08-10T12:39:48 IST" duration-ms="500" status="PASS">
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:userloveAdmin.loginTestCase.LoginWithValidCredential@815b41f]" started-at="2023-11-07T15:09:08 IST" name="cleanUp" finished-at="2023-11-07T15:09:09 IST" duration-ms="1350" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method is-config="true" signature="postCleanUp()[pri:0, instance:userloveAdmin.smokeTestCase.SmokeTest@4cc451f2]" started-at="2023-08-10T12:39:52 IST" name="postCleanUp" finished-at="2023-08-10T12:39:52 IST" duration-ms="662" status="PASS">
+        <test-method is-config="true" signature="postCleanUp()[pri:0, instance:userloveAdmin.loginTestCase.LoginWithValidCredential@815b41f]" started-at="2023-11-07T15:09:09 IST" name="postCleanUp" finished-at="2023-11-07T15:09:10 IST" duration-ms="556" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCleanUp -->
-      </class> <!-- userloveAdmin.smokeTestCase.SmokeTest -->
+      </class> <!-- userloveAdmin.loginTestCase.LoginWithValidCredential -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
