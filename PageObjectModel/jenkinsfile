@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+
+    stages {
+       
+        stage('maven clean') {
+            steps {
+                dir("PageObjectModel/"){
+                    powershell 'mvn clean'
+                }
+            }
+        }
+        
+         stage('maven test') {
+            steps {
+                dir("PageObjectModel/"){
+                    powershell 'mvn test'
+                }
+            }
+        }
+    }
+}
