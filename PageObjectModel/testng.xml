@@ -4,8 +4,8 @@
   <test name="Userlove Saas Product">
     <classes>
       <class name="userloveAdmin.loginTestCase.LoginWithValidCredential"/>
-    <!--  <class name="userloveAdmin.loginTestCase.LoginWithINVALIDCredential"/>
-   <class name="userloveAdmin.smokeTestCase.SmokeTest"/>    -->   
+    <class name="userloveAdmin.loginTestCase.LoginWithINVALIDCredential"/>
+   <!--  <class name="userloveAdmin.smokeTestCase.SmokeTest"/>    -->   
       
        
     </classes>
