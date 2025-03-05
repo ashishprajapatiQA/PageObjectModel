@@ -144,6 +144,7 @@ public class BaseTest {
 		logger = Logger.getLogger("Userlove");
 		PropertyConfigurator.configure("log4J.properties");
 		
+		
 		browserType = configProperties.getProperty("browserType");
 		cmnDriver = new CommonDriver(browserType);
 

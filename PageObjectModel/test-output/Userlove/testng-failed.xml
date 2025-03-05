@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Userlove]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Userlove Saas Product(failed)">
+    <classes>
+      <class name="userloveAdmin.loginTestCase.LoginWithValidCredential">
+        <methods>
+          <include name="verifyUserloginwithcorrectCredentials"/>
+          <include name="afterMethod"/>
+          <include name="setup"/>
+          <include name="cleanUp"/>
+          <include name="postCleanUp"/>
+          <include name="preSetup"/>
+        </methods>
+      </class> <!-- userloveAdmin.loginTestCase.LoginWithValidCredential -->
+    </classes>
+  </test> <!-- Userlove Saas Product(failed) -->
+</suite> <!-- Failed suite [Userlove] -->
