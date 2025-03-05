@@ -7,7 +7,7 @@ import com.aventstack.extentreports.Status;
 
 public class LoginWithINVALIDCredential extends BaseTest {
 // Here is we write the Test cases & pass value to logic layer(here all steps defined just need values) 
-	@Test(priority = 0)
+	@Test
 	public void verifyUserloginwithINVALIDCredentials() throws Exception {
 		// TC00
 		logger.info("Url is opened -verifyUserloginwithINVALIDCredentials");
@@ -17,7 +17,9 @@ public class LoginWithINVALIDCredential extends BaseTest {
 																												// log
 		String username = configProperties.getProperty("userEmailId");
 		extentTest.log(Status.INFO, "User Email-id -" + username);
+
 		String password = "Test@12345";
+
 		extentTest.log(Status.INFO, "User Password -" + password);
 
 		homePage.userLogin(username, password);// this pass value to logic layer page

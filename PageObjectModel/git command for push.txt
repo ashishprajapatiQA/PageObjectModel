@@ -1,0 +1,5 @@
+git remote show origin
+git remote rm origin
+git remote add origin git@github.com (git wali url project ni)
+git push -u origin master ---> yes
+ 

@@ -73,7 +73,11 @@ public class Smoke extends BasePage {
 
 	private WebElement DashboardLabel;
 
-	@FindBy(xpath = "//*[@id=\"root\"]/div/div[2]/div[1]/div/div[1]/div/a[4]")
+
+	
+
+	@FindBy(xpath = "//*[@id=\"root\"]/div/div[2]/div[1]/div/div[1]/div/a[4]/div/svg")
+
 	private WebElement SurveyPageLink;
 	
 

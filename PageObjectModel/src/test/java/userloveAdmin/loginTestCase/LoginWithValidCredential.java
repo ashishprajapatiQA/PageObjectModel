@@ -11,7 +11,9 @@ public class LoginWithValidCredential extends BaseTest {
 	@Test
 	public void verifyUserloginwithcorrectCredentials() throws Exception {
 		// TC001
+
 		logger.info("Url is opened -verifyUserloginwithcorrectCredentials");
+
 		extentTest = extent.createTest("TC-001 - verify Userlogin with correct credentials");
 		extentTest.log(Status.INFO, "Start Testcase - TC-001 - verify Userlogin with correct credentials "); // report
 																												// log
