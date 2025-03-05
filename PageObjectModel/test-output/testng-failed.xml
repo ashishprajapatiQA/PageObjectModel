@@ -9,8 +9,8 @@
           <include name="afterMethod"/>
           <include name="setup"/>
           <include name="cleanUp"/>
-          <include name="postCleanUp"/>
           <include name="preSetup"/>
+          <include name="postCleanUp"/>
         </methods>
       </class> <!-- userloveAdmin.loginTestCase.LoginWithValidCredential -->
     </classes>
