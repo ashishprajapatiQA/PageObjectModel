@@ -12,7 +12,7 @@ public class LoginWithINVALIDCredential extends BaseTest {
 		// TC00
 		logger.info("Url is opened -verifyUserloginwithINVALIDCredentials");
 		
-		extentTest = extent.createTest("TC-00 - verify Userlogin with Invalid credentials");
+		extentTest = extent.createTest("TC-002 - verify Userlogin with Invalid credentials");
 		extentTest.log(Status.INFO, "Start Testcase - TC-00 - verify Userlogin with Invalid credentials "); // report
 																												// log
 		String username = configProperties.getProperty("userEmailId");
