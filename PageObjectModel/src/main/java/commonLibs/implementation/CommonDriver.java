@@ -9,8 +9,12 @@ import org.openqa.selenium.edge.EdgeDriver;
 
 import commonLibs.contracts.IDriver;
 
+
+
 public class CommonDriver implements IDriver {
-	private WebDriver driver;
+
+	
+	private static WebDriver driver;
 	private int pageloadTimeout;
 	private int elementDetectionTimeout;
 	private String currentWorkingDirectory;
@@ -20,6 +24,8 @@ public class CommonDriver implements IDriver {
 		pageloadTimeout = 60;
 		elementDetectionTimeout = 10;
 		currentWorkingDirectory = System.getProperty("user.dir");
+		
+		
 
 		if (browserType.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", currentWorkingDirectory + "/browserDrivers/chromedriver.exe");

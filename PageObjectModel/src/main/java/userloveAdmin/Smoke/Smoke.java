@@ -28,7 +28,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+// import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import commonLibs.implementation.ScreenshotControl;
 import commonLibs.utils.WaitUtils;
@@ -42,9 +42,9 @@ public class Smoke extends BasePage {
 	static String executionStartDate;
 
 	// reports
-	public ExtentHtmlReporter htmlReporter;
-	public ExtentReports extent;
-	public ExtentTest extentTest;
+	// public ExtentHtmlReporter htmlReporter;
+	public static ExtentReports extent;
+	public static ExtentTest extentTest;
 
 	String reportFilename;
 
@@ -73,8 +73,9 @@ public class Smoke extends BasePage {
 
 	private WebElement DashboardLabel;
 
-	@FindBy(xpath = "/html/body/div/div/div[2]/div[1]/div/div/div[1]/a[4]")
+	@FindBy(xpath = "//*[@id=\"root\"]/div/div[2]/div[1]/div/div[1]/div/a[4]")
 	private WebElement SurveyPageLink;
+	
 
 	@FindBy(xpath = "/html/body/div/div/div[2]/div[1]/div/div/div[1]/a[3]")
 	private WebElement ChecklistPageLink;
@@ -102,7 +103,7 @@ public class Smoke extends BasePage {
 
 	// --------------------------create
 	// survey-----------------------------------------
-	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[1]/div/div[2]/div/div[1]/button")
+	@FindBy(xpath = "//*[@id=\"root\"]/div/div[2]/div[2]/div[1]/div[1]/div/div/div[2]/button")
 	private WebElement createsurveybtn;
 
 	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[1]/div/div[2]/div/div[1]/div/div[4]/p[2]")
@@ -213,7 +214,7 @@ public class Smoke extends BasePage {
 			WaitUtils.waitForSeconds(3);
 
 		}
-
+		
 		System.out.println("page getCurrentUrl" + myVariable.getTitle()); // Userlove | Dashboard
 
 	}

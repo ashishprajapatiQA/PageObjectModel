@@ -1,0 +1,5 @@
+2024-06-14 14:30:46,419  INFO [main] Userlove:14 - Url is opened -verifyUserloginwithcorrectCredentials
+ 2024-06-14 14:30:50,844  INFO [main] Userlove:13 - Url is opened -verifyUserloginwithINVALIDCredentials
+ 2024-06-14 16:19:00,736  INFO [main] Userlove:14 - Url is opened -verifyUserloginwithcorrectCredentials
+ 2024-06-14 16:19:32,878  INFO [main] Userlove:13 - Url is opened -verifyUserloginwithINVALIDCredentials
+ 

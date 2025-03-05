@@ -2,6 +2,8 @@ package userloveAdmin.loginTestCase;
 
 import java.util.Properties;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
@@ -13,7 +15,8 @@ import org.testng.annotations.BeforeSuite;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+ //import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import commonLibs.implementation.CommonDriver;
 import commonLibs.implementation.ScreenshotControl;
@@ -43,14 +46,18 @@ public class BaseTest {
 	int elementDetectionTimeout;
 
 	// reports
-	ExtentHtmlReporter htmlReporter;
-	ExtentReports extent;
-	ExtentTest extentTest;
+	// public static ExtentHtmlReporter htmlReporter;
+	public static ExtentReports extent;
+	public static ExtentTest extentTest;
 
 	String reportFilename;
 
 	String screenshotFilename;
 	ScreenshotControl screenshotControl;
+	
+	public static Logger logger;
+	
+	
 
 	static {
 
@@ -124,14 +131,19 @@ public class BaseTest {
 		// report code
 		reportFilename = String.format("%s/reports/UserLoveAdminLogin-%s.html", currentWorkingDirectory,
 				executionStartDate);
-		htmlReporter = new ExtentHtmlReporter(reportFilename);
+		//htmlReporter = new ExtentHtmlReporter(reportFilename);
+		ExtentSparkReporter spark = new ExtentSparkReporter(reportFilename);
 		extent = new ExtentReports();
-		extent.attachReporter(htmlReporter);
+		// extent.attachReporter(htmlReporter);
+		extent.attachReporter(spark);
 
 	}
 
 	private void invokeBrowser() throws Exception {
 
+		logger = Logger.getLogger("Userlove");
+		PropertyConfigurator.configure("log4J.properties");
+		
 		browserType = configProperties.getProperty("browserType");
 		cmnDriver = new CommonDriver(browserType);
 

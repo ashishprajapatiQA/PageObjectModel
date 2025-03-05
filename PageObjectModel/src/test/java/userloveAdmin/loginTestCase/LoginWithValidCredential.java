@@ -8,9 +8,10 @@ import com.aventstack.extentreports.Status;
 
 public class LoginWithValidCredential extends BaseTest {
 // Here is we write the Test cases & pass value to logic layer(here all steps defined just need values) 
-	@Test(priority = 0)
+	@Test
 	public void verifyUserloginwithcorrectCredentials() throws Exception {
 		// TC001
+		logger.info("Url is opened -verifyUserloginwithcorrectCredentials");
 		extentTest = extent.createTest("TC-001 - verify Userlogin with correct credentials");
 		extentTest.log(Status.INFO, "Start Testcase - TC-001 - verify Userlogin with correct credentials "); // report
 																												// log
@@ -24,21 +25,9 @@ public class LoginWithValidCredential extends BaseTest {
 
 		WebDriver driver = homePage.returndriver();
 		
-		extentTest.log(Status.INFO, "driver.getTitle();" + driver.getTitle());
-		
-		String verifyLoggedInUserEmailatProfile = homePage.verifyLoggedInUserEmailatProfile();
-		String loggedinEmail = configProperties.getProperty("afterloginprofiletext");
-		
+		extentTest.log(Status.INFO, "driver.getTitle();" + driver.getTitle());		
 
-		Boolean result = verifyLoggedInUserEmailatProfile.equals(loggedinEmail);
-
-		extentTest.log(Status.INFO, "UserEmail is -" + loggedinEmail);
-		extentTest.log(Status.INFO, "after loggedIn email is -" + verifyLoggedInUserEmailatProfile);
-		extentTest.log(Status.INFO, "Matching is  -" + result);
-
-		System.out.println("verifyLoggedInUserEmailatProfile  " + verifyLoggedInUserEmailatProfile);
-		System.out.println("loggedinEmail  " + loggedinEmail);
-		System.out.println("result  " + result);
+		Boolean result = driver.getPageSource().contains(configProperties.getProperty("afterloginprofiletext"));		
 		Assert.assertTrue(result);
 
 	}

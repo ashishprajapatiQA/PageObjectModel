@@ -13,7 +13,8 @@ import org.testng.annotations.BeforeSuite;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+//import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import commonLibs.implementation.CommonDriver;
 import commonLibs.implementation.ScreenshotControl;
@@ -43,9 +44,9 @@ public class BaseTest {
 	int elementDetectionTimeout;
 
 	// reports
-	ExtentHtmlReporter htmlReporter;
-	ExtentReports extent;
-	ExtentTest extentTest;
+	//ExtentHtmlReporter htmlReporter;
+	public static ExtentReports extent;
+	public static ExtentTest extentTest;
 
 	String reportFilename;
 
@@ -124,9 +125,11 @@ public class BaseTest {
 		// report code
 		reportFilename = String.format("%s/reports/UserLoveAdminSmoke-%s.html", currentWorkingDirectory,
 				executionStartDate);
-		htmlReporter = new ExtentHtmlReporter(reportFilename);
+		// htmlReporter = new ExtentHtmlReporter(reportFilename);
+		ExtentSparkReporter spark = new ExtentSparkReporter(reportFilename);
 		extent = new ExtentReports();
-		extent.attachReporter(htmlReporter);
+		//extent.attachReporter(htmlReporter);
+		extent.attachReporter(spark);
 
 	}
 

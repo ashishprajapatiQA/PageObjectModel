@@ -3,16 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="userloveAdmin.loginTestCase.LoginWithValidCredential">
+      <class name="userloveAdmin.loginTestCase.LoginWithINVALIDCredential">
         <methods>
-          <include name="verifyUserloginwithcorrectCredentials"/>
           <include name="afterMethod"/>
+          <include name="verifyUserloginwithINVALIDCredentials"/>
           <include name="setup"/>
           <include name="cleanUp"/>
-          <include name="preSetup"/>
           <include name="postCleanUp"/>
+          <include name="preSetup"/>
         </methods>
-      </class> <!-- userloveAdmin.loginTestCase.LoginWithValidCredential -->
+      </class> <!-- userloveAdmin.loginTestCase.LoginWithINVALIDCredential -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

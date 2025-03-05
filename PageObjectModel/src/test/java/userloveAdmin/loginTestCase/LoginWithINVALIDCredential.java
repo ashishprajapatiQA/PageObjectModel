@@ -10,17 +10,19 @@ public class LoginWithINVALIDCredential extends BaseTest {
 	@Test(priority = 0)
 	public void verifyUserloginwithINVALIDCredentials() throws Exception {
 		// TC00
+		logger.info("Url is opened -verifyUserloginwithINVALIDCredentials");
+		
 		extentTest = extent.createTest("TC-00 - verify Userlogin with Invalid credentials");
 		extentTest.log(Status.INFO, "Start Testcase - TC-00 - verify Userlogin with Invalid credentials "); // report
 																												// log
-		String username = configProperties.getProperty("InvaliduserEmailId");
+		String username = configProperties.getProperty("userEmailId");
 		extentTest.log(Status.INFO, "User Email-id -" + username);
-		String password = configProperties.getProperty("InvaliduserPassword");
+		String password = "Test@12345";
 		extentTest.log(Status.INFO, "User Password -" + password);
 
 		homePage.userLogin(username, password);// this pass value to logic layer page
 
-		Boolean result = homePage.DuetoInvalidCredentialForgottpwdLinkcome();
+		Boolean result = homePage.DuetoInvalidCredentialLoginWithOtpLinkcome();
 		System.out.println("result " + result);
 		if (result = true) {
 			extentTest.log(Status.INFO, "UserEmail is -" + username);
