@@ -37,24 +37,25 @@ public class LoginPage extends BasePage {
 	private WebDriver mydriver;
 	// Logic layer - what we perform step by step
 
-	@FindBy(xpath = "/html/body/div/div/div/div[2]/div/div[2]/form/div[1]/div/div/input")
+	@FindBy(xpath = "/html/body/div/div/div/div[2]/div/div[1]/form/div[1]/div/div/input")
 	private WebElement email;
 
-	@FindBy(xpath = "/html/body/div/div/div/div[2]/div/div[2]/form/div[2]/div/div/input")
+	@FindBy(xpath = "/html/body/div/div/div/div[2]/div/div[1]/form/div[2]/div/div/input")
+	
 	private WebElement pwd;
 
-	@FindBy(xpath = "/html/body/div/div/div/div[2]/div/div[2]/form/button")
+	@FindBy(xpath = "/html/body/div/div/div/div[2]/div/div[1]/form/button")
 	private WebElement userButton;
 
 	@FindBy(xpath = "/html/body/div/div/div[1]/div[2]/button/div[2]/span[2]")
 	private WebElement loggedinUserEmailatProfile;
 
 
-	@FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div/div[2]/form/div[3]/p")
+	@FindBy(xpath = "/html/body/div/div/div/div[2]/div/div[1]/form/div[3]/p")
 	
 	private WebElement LoginWithOtp;
 
-	@FindBy(xpath = "/html/body/div/div/div/div[2]/div/div[2]/form/div[3]/p")
+	@FindBy(xpath = "/html/body/div/div/div/div[2]/div/div[1]/form/div[3]/div")
 	private WebElement ForgotPassLink;
 
 	
