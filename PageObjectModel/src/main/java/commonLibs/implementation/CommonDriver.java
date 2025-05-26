@@ -1,5 +1,6 @@
 package commonLibs.implementation;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -8,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 
 import commonLibs.contracts.IDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 
