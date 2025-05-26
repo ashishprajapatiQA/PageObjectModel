@@ -20,30 +20,32 @@ public class CommonDriver implements IDriver {
 	private String currentWorkingDirectory;
 
 	public CommonDriver(String browserType) throws Exception {
-		// TODO Auto-generated constructor stub
-		pageloadTimeout = 60;
-		elementDetectionTimeout = 10;
-		currentWorkingDirectory = System.getProperty("user.dir");
-		
-		
+        // TODO Auto-generated constructor stub
+        pageloadTimeout = 60;
+        elementDetectionTimeout = 10;
+        currentWorkingDirectory = System.getProperty("user.dir");
 
-		if (browserType.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", currentWorkingDirectory + "/browserDrivers/chromedriver.exe");
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--incognito");
-			options.addArguments("--remote-allow-origins=*");
-			
-			driver = new ChromeDriver(options);
-		} else if (browserType.equalsIgnoreCase("edge")) {
-			System.setProperty("webdriver.chrome.driver", currentWorkingDirectory + "/browserDrivers/msedgedriver.exe");
-			driver = new EdgeDriver();
-		} else {
-			System.out.println("\n*****************Invalid Browser Type*****************");
-		}
+        if (browserType.equalsIgnoreCase("chrome")) {
+//            System.setProperty("webdriver.chrome.driver", currentWorkingDirectory + "/browserDrivers/chromedriver.exe"); // windows setting - call driver manually
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--incognito");
+            options.addArguments("--remote-allow-origins=*");
 
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-	}
+            // driver = new ChromeDriver(options); // windows setting - call driver manually
+
+            WebDriverManager.chromedriver().setup(); // Mac - no driver needed using this
+            driver = new ChromeDriver();
+
+        } else if (browserType.equalsIgnoreCase("edge")) {
+            System.setProperty("webdriver.chrome.driver", currentWorkingDirectory + "/browserDrivers/msedgedriver.exe");
+            driver = new EdgeDriver();
+        } else {
+            System.out.println("\n*****************Invalid Browser Type*****************");
+        }
+
+        driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
+    }
 
 	public WebDriver getDriver() {
 		return driver;
@@ -62,12 +64,14 @@ public class CommonDriver implements IDriver {
 	}
 
 	public void navigateToFirstUrl(String url) throws Exception {
-		// TODO Auto-generated method stub
-		driver.manage().timeouts().pageLoadTimeout(pageloadTimeout, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(elementDetectionTimeout, TimeUnit.SECONDS);
-		url = url.trim();
-		driver.get(url);
-	}
+        // TODO Auto-generated method stub
+
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(pageloadTimeout));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(elementDetectionTimeout));
+
+        url = url.trim();
+        driver.get(url);
+    }
 
 	public String getTitle() throws Exception {
 		// TODO Auto-generated method stub
