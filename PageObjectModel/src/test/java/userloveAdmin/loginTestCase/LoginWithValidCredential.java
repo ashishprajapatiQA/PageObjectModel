@@ -10,7 +10,7 @@ public class LoginWithValidCredential extends BaseTest {
 // Here is we write the Test cases & pass value to logic layer(here all steps defined just need values) 
 	@Test
 	public void verifyUserloginwithcorrectCredentials() throws Exception {
-		// TC001 
+		// TC001
 
 		logger.info("Url is opened -verifyUserloginwithcorrectCredentials");
 		
