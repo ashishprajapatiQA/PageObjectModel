@@ -5,8 +5,8 @@
     <classes>
       <class name="userloveAdmin.loginTestCase.LoginWithValidCredential">
         <methods>
-          <include name="verifyUserloginwithcorrectCredentials"/>
           <include name="afterMethod"/>
+          <include name="verifyUserloginwithcorrectCredentials"/>
           <include name="setup"/>
           <include name="cleanUp"/>
           <include name="preSetup"/>
