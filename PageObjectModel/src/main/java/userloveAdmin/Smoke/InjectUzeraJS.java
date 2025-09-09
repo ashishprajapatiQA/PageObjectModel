@@ -11,7 +11,7 @@ import java.util.Random;
 public class InjectUzeraJS {
 	public static void main(String[] args) throws InterruptedException {
 
-		for (int i = 1; i <= 5; i++) {
+		for (int i = 1; i <= 25; i++) {
 			WebDriverManager.chromedriver().setup();
 
 			ChromeOptions options = new ChromeOptions();

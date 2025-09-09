@@ -17,7 +17,7 @@ public class IdentifySite {
         Random rand = new Random();
 
         // Repeat 10 times
-        for (int i = 1; i <= 3; i++) {
+        for (int i = 1; i <= 30; i++) {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--start-maximized");

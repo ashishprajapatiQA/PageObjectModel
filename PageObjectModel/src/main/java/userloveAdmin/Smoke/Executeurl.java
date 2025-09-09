@@ -12,7 +12,7 @@ public class Executeurl {
 		// String url = "https://test-project-rouge-one.vercel.app/"; // Change your URL
 
 		// Repeat 10 times
-		for (int i = 1; i <= 1; i++) {
+		for (int i = 1; i <= 300; i++) {
 			// Setup ChromeDriver
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();

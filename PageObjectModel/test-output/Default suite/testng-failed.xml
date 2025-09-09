@@ -9,8 +9,8 @@
           <include name="verifyUserloginwithcorrectCredentials"/>
           <include name="setup"/>
           <include name="cleanUp"/>
-          <include name="preSetup"/>
           <include name="postCleanUp"/>
+          <include name="preSetup"/>
         </methods>
       </class> <!-- userloveAdmin.loginTestCase.LoginWithValidCredential -->
     </classes>
