@@ -39,6 +39,14 @@ public class Executeurl {
 
 			driver.quit();
 			System.out.println("Run " + i + " completed.");
+
+			// Odd/even logic
+			if (i % 2 == 0) {
+				// even → open url1
+			} else {
+				// odd → open url2
+			}
+
 		}
 	}
 }

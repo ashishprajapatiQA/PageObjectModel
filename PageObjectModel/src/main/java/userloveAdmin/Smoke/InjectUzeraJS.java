@@ -42,3 +42,11 @@ public class InjectUzeraJS {
 
 	}
 }
+//Click the button with text "Let's Start" inside the modal
+//js.executeScript("Array.from(document.querySelectorAll('#modal-body-main button'))"
+//		+ ".find(btn => btn.textContent.trim() === \"Let's Start\").click();");
+//
+
+//driver.switchTo().frame("ul-product-tour-580fcd04-ff7f-4fed-b87f-c6af9ac6f8ba");
+//js.executeScript("Array.from(document.querySelectorAll('#main-tooltip-body button'))"
+//		+ ".find(btn => btn.textContent.trim() === \"Next\").click();");

@@ -8,7 +8,7 @@ import com.aventstack.extentreports.Status;
 
 public class LoginWithValidCredential extends BaseTest {
 // Here is we write the Test cases & pass value to logic layer(here all steps defined just need values) 
-	@Test
+	@Test(groups = {"smoke"})
 	public void verifyUserloginwithcorrectCredentials() throws Exception {
 		// TC001
 
