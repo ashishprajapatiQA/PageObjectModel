@@ -1,4 +1,4 @@
-package userloveAdmin.loginTestCase;
+package uzera.loginTestCase;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;

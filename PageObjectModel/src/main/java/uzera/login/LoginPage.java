@@ -1,4 +1,4 @@
-package userloveAdmin.login;
+package uzera.login;
 
 import java.time.Duration;
 import java.util.Properties;

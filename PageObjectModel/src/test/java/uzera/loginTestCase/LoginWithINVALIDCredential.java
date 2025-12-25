@@ -1,4 +1,4 @@
-package userloveAdmin.loginTestCase;
+package uzera.loginTestCase;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

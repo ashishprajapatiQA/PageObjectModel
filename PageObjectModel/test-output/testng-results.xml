@@ -2,42 +2,45 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-29T18:32:55 IST" name="Default suite" finished-at="2025-08-29T18:33:02 IST" duration-ms="7087">
+  <suite started-at="2025-12-25T14:07:20 IST" name="Default suite" finished-at="2025-12-25T14:07:28 IST" duration-ms="7655">
     <groups>
+      <group name="smoke">
+        <method signature="LoginWithValidCredential.verifyUserloginwithcorrectCredentials()[pri:0, instance:uzera.loginTestCase.LoginWithValidCredential@ae13544]" name="verifyUserloginwithcorrectCredentials" class="uzera.loginTestCase.LoginWithValidCredential"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-08-29T18:32:55 IST" name="Default test" finished-at="2025-08-29T18:33:02 IST" duration-ms="7087">
-      <class name="userloveAdmin.loginTestCase.LoginWithValidCredential">
-        <test-method is-config="true" signature="preSetup()[pri:0, instance:userloveAdmin.loginTestCase.LoginWithValidCredential@5b12b668]" started-at="2025-08-29T18:32:55 IST" name="preSetup" finished-at="2025-08-29T18:32:55 IST" duration-ms="95" status="PASS">
+    <test started-at="2025-12-25T14:07:20 IST" name="Default test" finished-at="2025-12-25T14:07:28 IST" duration-ms="7655">
+      <class name="uzera.loginTestCase.LoginWithValidCredential">
+        <test-method is-config="true" signature="preSetup()[pri:0, instance:uzera.loginTestCase.LoginWithValidCredential@ae13544]" started-at="2025-12-25T14:07:20 IST" name="preSetup" finished-at="2025-12-25T14:07:20 IST" duration-ms="97" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preSetup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:userloveAdmin.loginTestCase.LoginWithValidCredential@5b12b668]" started-at="2025-08-29T18:32:55 IST" name="setup" finished-at="2025-08-29T18:33:01 IST" duration-ms="5816" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:uzera.loginTestCase.LoginWithValidCredential@ae13544]" started-at="2025-12-25T14:07:20 IST" name="setup" finished-at="2025-12-25T14:07:27 IST" duration-ms="6430" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyUserloginwithcorrectCredentials()[pri:0, instance:userloveAdmin.loginTestCase.LoginWithValidCredential@5b12b668]" started-at="2025-08-29T18:33:01 IST" name="verifyUserloginwithcorrectCredentials" finished-at="2025-08-29T18:33:02 IST" duration-ms="1032" status="FAIL">
+        <test-method signature="verifyUserloginwithcorrectCredentials()[pri:0, instance:uzera.loginTestCase.LoginWithValidCredential@ae13544]" started-at="2025-12-25T14:07:27 IST" name="verifyUserloginwithcorrectCredentials" finished-at="2025-12-25T14:07:28 IST" duration-ms="1045" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div/div/div/div[2]/div/div[1]/form/div[1]/div/div/input"}
-  (Session info: chrome=139.0.7258.140)
+  (Session info: chrome=143.0.7499.170)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.23.0', revision: '4df0a231af'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '23'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2fd8fcbd9fa8a28776f19d4c032ae063, findElement {value=/html/body/div/div/div/div[2]/div/div[1]/form/div[1]/div/div/input, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.140, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: /var/folders/sp/yg4dccbx54q...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64167}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:64167/devtoo..., se:cdpVersion: 139.0.7258.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2fd8fcbd9fa8a28776f19d4c032ae063]]>
+Command: [3b8b9d87e1a11adf38b6d7e0f856d273, findElement {value=/html/body/div/div/div/div[2]/div/div[1]/form/div[1]/div/div/input, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: /var/folders/sp/yg4dccbx54q...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51696}, goog:processID: 88512, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51696/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3b8b9d87e1a11adf38b6d7e0f856d273]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div/div/div/div[2]/div/div[1]/form/div[1]/div/div/input"}
-  (Session info: chrome=139.0.7258.140)
+  (Session info: chrome=143.0.7499.170)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.23.0', revision: '4df0a231af'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '23'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2fd8fcbd9fa8a28776f19d4c032ae063, findElement {value=/html/body/div/div/div/div[2]/div/div[1]/form/div[1]/div/div/input, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.140, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: /var/folders/sp/yg4dccbx54q...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64167}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:64167/devtoo..., se:cdpVersion: 139.0.7258.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2fd8fcbd9fa8a28776f19d4c032ae063
+Command: [3b8b9d87e1a11adf38b6d7e0f856d273, findElement {value=/html/body/div/div/div/div[2]/div/div[1]/form/div[1]/div/div/input, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: /var/folders/sp/yg4dccbx54q...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51696}, goog:processID: 88512, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51696/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3b8b9d87e1a11adf38b6d7e0f856d273
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
@@ -56,31 +59,31 @@ at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(Def
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
 at commonLibs.implementation.CommonElement.setText(CommonElement.java:47)
-at userloveAdmin.login.LoginPage.userLogin(LoginPage.java:97)
-at userloveAdmin.loginTestCase.LoginWithValidCredential.verifyUserloginwithcorrectCredentials(LoginWithValidCredential.java:25)
+at uzera.login.LoginPage.userLogin(LoginPage.java:97)
+at uzera.loginTestCase.LoginWithValidCredential.verifyUserloginwithcorrectCredentials(LoginWithValidCredential.java:25)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
 at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
@@ -90,26 +93,26 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserloginwithcorrectCredentials -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:userloveAdmin.loginTestCase.LoginWithValidCredential@5b12b668]" started-at="2025-08-29T18:33:02 IST" name="afterMethod" finished-at="2025-08-29T18:33:02 IST" duration-ms="129" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:uzera.loginTestCase.LoginWithValidCredential@ae13544]" started-at="2025-12-25T14:07:28 IST" name="afterMethod" finished-at="2025-12-25T14:07:28 IST" duration-ms="70" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserloginwithcorrectCredentials status=FAILURE method=LoginWithValidCredential.verifyUserloginwithcorrectCredentials()[pri:0, instance:userloveAdmin.loginTestCase.LoginWithValidCredential@5b12b668] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserloginwithcorrectCredentials status=FAILURE method=LoginWithValidCredential.verifyUserloginwithcorrectCredentials()[pri:0, instance:uzera.loginTestCase.LoginWithValidCredential@ae13544] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="cleanUp()[pri:0, instance:userloveAdmin.loginTestCase.LoginWithValidCredential@5b12b668]" started-at="2025-08-29T18:33:02 IST" name="cleanUp" finished-at="2025-08-29T18:33:02 IST" duration-ms="92" status="PASS">
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:uzera.loginTestCase.LoginWithValidCredential@ae13544]" started-at="2025-12-25T14:07:28 IST" name="cleanUp" finished-at="2025-12-25T14:07:28 IST" duration-ms="88" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method is-config="true" signature="postCleanUp()[pri:0, instance:userloveAdmin.loginTestCase.LoginWithValidCredential@5b12b668]" started-at="2025-08-29T18:33:08 IST" name="postCleanUp" finished-at="2025-08-29T18:33:08 IST" duration-ms="127" status="PASS">
+        <test-method is-config="true" signature="postCleanUp()[pri:0, instance:uzera.loginTestCase.LoginWithValidCredential@ae13544]" started-at="2025-12-25T14:07:33 IST" name="postCleanUp" finished-at="2025-12-25T14:07:33 IST" duration-ms="120" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCleanUp -->
-      </class> <!-- userloveAdmin.loginTestCase.LoginWithValidCredential -->
+      </class> <!-- uzera.loginTestCase.LoginWithValidCredential -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

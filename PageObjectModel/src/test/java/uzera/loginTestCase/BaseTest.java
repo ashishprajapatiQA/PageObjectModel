@@ -1,4 +1,4 @@
-package userloveAdmin.loginTestCase;
+package uzera.loginTestCase;
 
 import java.util.Properties;
 
@@ -22,7 +22,7 @@ import commonLibs.implementation.CommonDriver;
 import commonLibs.implementation.ScreenshotControl;
 import commonLibs.utils.ConfigFileUtils;
 import commonLibs.utils.DateUtils;
-import userloveAdmin.login.LoginPage;
+import uzera.login.LoginPage;
 
 public class BaseTest {
 
