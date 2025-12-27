@@ -39,7 +39,7 @@ public class BaseTest {
 	// configuration file data fetch
 	static String configFileName;
 	static Properties configProperties;
-	static String currentWorkingDirectory;
+    static String currentWorkingDirectory;
 	static String executionStartDate;
 
 	int pageloadtimeout;

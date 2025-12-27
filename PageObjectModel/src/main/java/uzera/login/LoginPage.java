@@ -37,7 +37,7 @@ public class LoginPage extends BasePage {
 	private WebDriver mydriver;
 	// Logic layer - what we perform step by step
 
-	@FindBy(xpath = "/html/body/div/div/div/div[2]/div/div[1]/form/div[1]/div/div/input")
+	@FindBy(xpath = "/html/body/div/div/div/div[2]/div[2]/div/div[1]/form/div[1]/div/div/input")
 	private WebElement email;
 
 	@FindBy(xpath = "/html/body/div/div/div/div[2]/div/div[1]/form/div[2]/div/div/input")
@@ -95,6 +95,8 @@ public class LoginPage extends BasePage {
 
 		WaitUtils.waitForSeconds(1);
 		elementControl.setText(email, username);
+		
+		
 		elementControl.setText(pwd, password);
 		WaitUtils.waitForSeconds(2);
 

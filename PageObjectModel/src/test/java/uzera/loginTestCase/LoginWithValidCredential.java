@@ -7,6 +7,22 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 
 public class LoginWithValidCredential extends BaseTest {
+	
+	 
+	 public void takeScreenshot(String customName) throws Exception {
+		    String screenshotPath = String.format(
+		            "%s/screenshot/%s-%s.jpeg",
+		            BaseTest.currentWorkingDirectory,
+		            customName,                        // ✅ use the parameter here
+		            BaseTest.executionStartDate
+		    );
+
+		    screenshotControl.captureAndSaveScreenshot(screenshotPath);
+		    extentTest.addScreenCaptureFromPath(screenshotPath);
+		}
+
+	 
+	 
 // Here is we write the Test cases & pass value to logic layer(here all steps defined just need values) 
 	@Test(groups = {"smoke"})
 	public void verifyUserloginwithcorrectCredentials() throws Exception {
@@ -19,9 +35,13 @@ public class LoginWithValidCredential extends BaseTest {
 																												// log
 		String username = configProperties.getProperty("userEmailId");
 		extentTest.log(Status.INFO, "User Email-id -" + username);
+		
+		
 		String password = configProperties.getProperty("userPassword");
 		extentTest.log(Status.INFO, "User Password -" + password);
 
+		takeScreenshot("whilenterusername");
+		
 		homePage.userLogin(username, password);// this pass value to logic layer page
 		extentTest.log(Status.INFO, "User Login  Successfully");
 
