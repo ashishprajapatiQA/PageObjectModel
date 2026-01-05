@@ -6,11 +6,11 @@
       <class name="uzera.loginTestCase.LoginWithValidCredential">
         <methods>
           <include name="preSetup"/>
-          <include name="setup"/>
           <include name="afterMethod"/>
+          <include name="setup"/>
           <include name="cleanUp"/>
           <include name="postCleanUp"/>
-          <include name="verifyUserloginwithcorrectCredentials"/>
+          <include name="verifyUserloginwithINVALIDCredentials"/>
         </methods>
       </class> <!-- uzera.loginTestCase.LoginWithValidCredential -->
     </classes>

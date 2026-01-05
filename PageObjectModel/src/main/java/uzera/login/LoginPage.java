@@ -1,7 +1,7 @@
 package uzera.login;
 
-import java.time.Duration;
 import java.util.Properties;
+import java.util.stream.Stream;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,33 +33,31 @@ public class LoginPage extends BasePage {
 	String reportFilename;
 
 	ScreenshotControl screenshotControl;
-	
+
 	private WebDriver mydriver;
 	// Logic layer - what we perform step by step
 
-	@FindBy(xpath = "/html/body/div/div/div/div[2]/div[2]/div/div[1]/form/div[1]/div/div/input")
+	@FindBy(xpath = "//input[@placeholder='you@company.com']")
 	private WebElement email;
 
-	@FindBy(xpath = "/html/body/div/div/div/div[2]/div/div[1]/form/div[2]/div/div/input")
-	
+	@FindBy(xpath = "//input[@placeholder='Enter your password']")
 	private WebElement pwd;
 
-	@FindBy(xpath = "/html/body/div/div/div/div[2]/div/div[1]/form/button")
+	@FindBy(xpath = "//button[contains(text(), 'Sign in')]")
 	private WebElement userButton;
 
 	@FindBy(xpath = "/html/body/div/div/div[1]/div[2]/button/div[2]/span[2]")
 	private WebElement loggedinUserEmailatProfile;
 
-
-	@FindBy(xpath = "/html/body/div/div/div/div[2]/div/div[1]/form/div[3]/p")
+	@FindBy(xpath = "//h1[contains(text(), 'Welcome back')]")
+	private WebElement loginPageText;
 	
-	private WebElement LoginWithOtp;
+	@FindBy(linkText = "Invalid email or password.")
+	private WebElement Invalidcredential;
 
-	@FindBy(xpath = "/html/body/div/div/div/div[2]/div/div[1]/form/div[3]/div")
-	private WebElement ForgotPassLink;
+	@FindBy(xpath = "/html/body/div/div/div/div[2]/div[2]/div/div[1]/form/div[2]/div[2]/p")
+	private WebElement noexistscredential;
 
-	
-	
 	static {
 
 		try {
@@ -81,39 +79,55 @@ public class LoginPage extends BasePage {
 												// class type, and returns a Page Object with its fields fully
 												// initialized
 		mydriver = driver;
-	
+
 	}
 
 	public WebDriver returndriver() throws Exception {
 		return mydriver;
 	}
-	
-	public void userLogin(String username, String password) throws Exception {
-		// this is logic layer for login functionality
-		// pass values to element to controls which we created to perform
-		
+
+	// this is logic layer for login functionality
+	// pass values to element to controls which we created to perform
+
+	// Login page checks Pre-condition code
+	public boolean isLoginPageDisplayed() throws Exception {
+
+		WaitUtils.waitForSeconds(1);
+		return elementControl.isElementVisiable(loginPageText);
+	}
+
+	// Login via valid credential code section
+
+	public void userName(String username) throws Exception {
 
 		WaitUtils.waitForSeconds(1);
 		elementControl.setText(email, username);
-		
-		
-		elementControl.setText(pwd, password);
-		WaitUtils.waitForSeconds(2);
-
-		elementControl.clickElement(userButton);
-
-		WaitUtils.waitForSeconds(10);	
-
-		
-	
 
 	}
 
-	
+	public void passWord(String password) throws Exception {
+
+		elementControl.setText(pwd, password);
+		WaitUtils.waitForSeconds(2);
+
+	}
+
+	public void signIN() throws Exception {
+
+		elementControl.clickElement(userButton);
+		WaitUtils.waitForSeconds(10);
+
+	}
+
+	// Login via Invalid credential code section
 
 	public boolean DuetoInvalidCredentialLoginWithOtpLinkcome() throws Exception {
-		boolean isElementTrue = LoginWithOtp.isDisplayed() && LoginWithOtp.isEnabled();
-		return isElementTrue;
+		
+	//	Invalidcredential.isDisplayed() ||
+	
+		return  noexistscredential.isDisplayed();
+		
+		
 	}
 
 }

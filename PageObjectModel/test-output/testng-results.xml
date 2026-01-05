@@ -1,98 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-27T15:52:13 IST" name="Default suite" finished-at="2025-12-27T15:52:25 IST" duration-ms="11889">
+  <suite started-at="2026-01-05T17:28:32 IST" name="Default suite" finished-at="2026-01-05T17:29:10 IST" duration-ms="37948">
     <groups>
+      <group name="smoke">
+        <method signature="LoginWithValidCredential.testLoginPageDisplayed()[pri:1, instance:uzera.loginTestCase.LoginWithValidCredential@4009e306]" name="testLoginPageDisplayed" class="uzera.loginTestCase.LoginWithValidCredential"/>
+        <method signature="LoginWithValidCredential.verifyUserloginwithINVALIDCredentials()[pri:2, instance:uzera.loginTestCase.LoginWithValidCredential@4009e306]" name="verifyUserloginwithINVALIDCredentials" class="uzera.loginTestCase.LoginWithValidCredential"/>
+        <method signature="LoginWithValidCredential.verifyUserloginwithcorrectCredentials()[pri:3, instance:uzera.loginTestCase.LoginWithValidCredential@4009e306]" name="verifyUserloginwithcorrectCredentials" class="uzera.loginTestCase.LoginWithValidCredential"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-12-27T15:52:13 IST" name="Default test" finished-at="2025-12-27T15:52:25 IST" duration-ms="11889">
-      <class name="SingleClassTestNG.LoginTestSingleFile">
-        <test-method is-config="true" signature="startSuite()[pri:0, instance:SingleClassTestNG.LoginTestSingleFile@77f1baf5]" started-at="2025-12-27T15:52:13 IST" name="startSuite" finished-at="2025-12-27T15:52:13 IST" duration-ms="143" status="PASS">
+    <test started-at="2026-01-05T17:28:32 IST" name="Default test" finished-at="2026-01-05T17:29:10 IST" duration-ms="37948">
+      <class name="uzera.loginTestCase.LoginWithValidCredential">
+        <test-method is-config="true" signature="preSetup()[pri:0, instance:uzera.loginTestCase.LoginWithValidCredential@4009e306]" started-at="2026-01-05T17:28:32 IST" name="preSetup" finished-at="2026-01-05T17:28:32 IST" duration-ms="106" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startSuite -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:SingleClassTestNG.LoginTestSingleFile@77f1baf5]" started-at="2025-12-27T15:52:13 IST" name="setUp" finished-at="2025-12-27T15:52:16 IST" duration-ms="3161" status="PASS">
+        </test-method> <!-- preSetup -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:uzera.loginTestCase.LoginWithValidCredential@4009e306]" started-at="2026-01-05T17:28:32 IST" name="setup" finished-at="2026-01-05T17:28:39 IST" duration-ms="6984" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testLoginPageDisplayed()[pri:1, instance:uzera.loginTestCase.LoginWithValidCredential@4009e306]" started-at="2026-01-05T17:28:39 IST" name="testLoginPageDisplayed" finished-at="2026-01-05T17:28:40 IST" duration-ms="1047" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginPageDisplayed -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:uzera.loginTestCase.LoginWithValidCredential@4009e306]" started-at="2026-01-05T17:28:40 IST" name="afterMethod" finished-at="2026-01-05T17:28:40 IST" duration-ms="75" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="beforeMethod([Ljava.lang.Object;,java.lang.reflect.Method)[pri:0, instance:SingleClassTestNG.LoginTestSingleFile@77f1baf5]" started-at="2025-12-27T15:52:16 IST" name="beforeMethod" finished-at="2025-12-27T15:52:16 IST" duration-ms="7" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@5bc28f40]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void SingleClassTestNG.LoginTestSingleFile.loginFailure()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="loginFailure()[pri:0, instance:SingleClassTestNG.LoginTestSingleFile@77f1baf5]" started-at="2025-12-27T15:52:16 IST" name="loginFailure" finished-at="2025-12-27T15:52:23 IST" duration-ms="6316" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginFailure -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:SingleClassTestNG.LoginTestSingleFile@77f1baf5]" started-at="2025-12-27T15:52:23 IST" name="afterMethod" finished-at="2025-12-27T15:52:23 IST" duration-ms="144" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=loginFailure status=SUCCESS method=LoginTestSingleFile.loginFailure()[pri:0, instance:SingleClassTestNG.LoginTestSingleFile@77f1baf5] output={null}]]]>
+                <![CDATA[[TestResult name=testLoginPageDisplayed status=SUCCESS method=LoginWithValidCredential.testLoginPageDisplayed()[pri:1, instance:uzera.loginTestCase.LoginWithValidCredential@4009e306] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="loginSuccess()[pri:0, instance:SingleClassTestNG.LoginTestSingleFile@77f1baf5]" started-at="2025-12-27T15:52:23 IST" name="loginSuccess" finished-at="2025-12-27T15:52:25 IST" duration-ms="2008" status="PASS">
+        <test-method signature="verifyUserloginwithINVALIDCredentials()[pri:2, instance:uzera.loginTestCase.LoginWithValidCredential@4009e306]" started-at="2026-01-05T17:28:40 IST" name="verifyUserloginwithINVALIDCredentials" finished-at="2026-01-05T17:28:53 IST" duration-ms="13394" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginSuccess -->
-        <test-method is-config="true" signature="beforeMethod([Ljava.lang.Object;,java.lang.reflect.Method)[pri:0, instance:SingleClassTestNG.LoginTestSingleFile@77f1baf5]" started-at="2025-12-27T15:52:23 IST" name="beforeMethod" finished-at="2025-12-27T15:52:23 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- verifyUserloginwithINVALIDCredentials -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:uzera.loginTestCase.LoginWithValidCredential@4009e306]" started-at="2026-01-05T17:28:53 IST" name="afterMethod" finished-at="2026-01-05T17:28:54 IST" duration-ms="61" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.Object;@46963479]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void SingleClassTestNG.LoginTestSingleFile.loginSuccess()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:SingleClassTestNG.LoginTestSingleFile@77f1baf5]" started-at="2025-12-27T15:52:25 IST" name="afterMethod" finished-at="2025-12-27T15:52:25 IST" duration-ms="131" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=loginSuccess status=SUCCESS method=LoginTestSingleFile.loginSuccess()[pri:0, instance:SingleClassTestNG.LoginTestSingleFile@77f1baf5] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserloginwithINVALIDCredentials status=SUCCESS method=LoginWithValidCredential.verifyUserloginwithINVALIDCredentials()[pri:2, instance:uzera.loginTestCase.LoginWithValidCredential@4009e306] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SingleClassTestNG.LoginTestSingleFile@77f1baf5]" started-at="2025-12-27T15:52:25 IST" name="tearDown" finished-at="2025-12-27T15:52:25 IST" duration-ms="100" status="PASS">
+        <test-method signature="verifyUserloginwithcorrectCredentials()[pri:3, instance:uzera.loginTestCase.LoginWithValidCredential@4009e306]" started-at="2026-01-05T17:28:54 IST" name="verifyUserloginwithcorrectCredentials" finished-at="2026-01-05T17:29:10 IST" duration-ms="16208" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="endSuite()[pri:0, instance:SingleClassTestNG.LoginTestSingleFile@77f1baf5]" started-at="2025-12-27T15:52:30 IST" name="endSuite" finished-at="2025-12-27T15:52:30 IST" duration-ms="207" status="PASS">
+        </test-method> <!-- verifyUserloginwithcorrectCredentials -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:uzera.loginTestCase.LoginWithValidCredential@4009e306]" started-at="2026-01-05T17:29:10 IST" name="afterMethod" finished-at="2026-01-05T17:29:10 IST" duration-ms="39" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserloginwithcorrectCredentials status=SUCCESS method=LoginWithValidCredential.verifyUserloginwithcorrectCredentials()[pri:3, instance:uzera.loginTestCase.LoginWithValidCredential@4009e306] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- endSuite -->
-      </class> <!-- SingleClassTestNG.LoginTestSingleFile -->
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:uzera.loginTestCase.LoginWithValidCredential@4009e306]" started-at="2026-01-05T17:29:10 IST" name="cleanUp" finished-at="2026-01-05T17:29:10 IST" duration-ms="118" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method is-config="true" signature="postCleanUp()[pri:0, instance:uzera.loginTestCase.LoginWithValidCredential@4009e306]" started-at="2026-01-05T17:29:15 IST" name="postCleanUp" finished-at="2026-01-05T17:29:15 IST" duration-ms="144" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCleanUp -->
+      </class> <!-- uzera.loginTestCase.LoginWithValidCredential -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

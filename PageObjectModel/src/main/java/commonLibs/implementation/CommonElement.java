@@ -36,7 +36,8 @@ public class CommonElement implements ICommonElement {
 		// TODO Auto-generated method stub
 		return element.isDisplayed();
 	}
-
+	
+	
 	public boolean isElementSelected(WebElement element) throws Exception {
 		// TODO Auto-generated method stub
 		return element.isSelected();

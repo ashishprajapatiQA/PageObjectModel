@@ -1,14 +1,14 @@
-2025-05-27 17:18:50,895  INFO [main] Userlove:15 - Url is opened -verifyUserloginwithcorrectCredentials
- 2025-08-03 13:41:42,344  INFO [main] Userlove:15 - Url is opened -verifyUserloginwithcorrectCredentials
- 2025-08-03 13:42:15,287  INFO [main] Userlove:15 - Url is opened -verifyUserloginwithcorrectCredentials
- 2025-08-29 18:33:01,705  INFO [main] Userlove:15 - Url is opened -verifyUserloginwithcorrectCredentials
- 2025-12-25 12:32:59,434  INFO [main] Userlove:15 - Url is opened -verifyUserloginwithcorrectCredentials
- 2025-12-25 14:07:27,367  INFO [main] Userlove:15 - Url is opened -verifyUserloginwithcorrectCredentials
- 2025-12-27 11:09:53,225  INFO [main] Userlove:15 - Url is opened -verifyUserloginwithcorrectCredentials
- 2025-12-27 11:11:01,632  INFO [main] Userlove:15 - Url is opened -verifyUserloginwithcorrectCredentials
- 2025-12-27 11:22:59,459  INFO [main] Userlove:15 - Url is opened -verifyUserloginwithcorrectCredentials
- 2025-12-27 11:28:25,844  INFO [main] Userlove:15 - Url is opened -verifyUserloginwithcorrectCredentials
- 2025-12-27 11:36:16,536  INFO [main] Userlove:15 - Url is opened -verifyUserloginwithcorrectCredentials
- 2025-12-27 11:40:15,172  INFO [main] Userlove:15 - Url is opened -verifyUserloginwithcorrectCredentials
- 2025-12-27 15:41:41,260  INFO [main] Userlove:31 - Url is opened -verifyUserloginwithcorrectCredentials
+2026-01-05 17:00:42,953  INFO [main] Userlove:39 - Url is opened -verifyUserloginwithINVALIDCredentials
+ 2026-01-05 17:00:59,142  INFO [main] Userlove:85 - Url is opened -verifyUserloginwithcorrectCredentials
+ 2026-01-05 17:12:31,461  INFO [main] Userlove:39 - Url is opened -verifyUserloginwithINVALIDCredentials
+ 2026-01-05 17:12:47,753  INFO [main] Userlove:85 - Url is opened -verifyUserloginwithcorrectCredentials
+ 2026-01-05 17:20:07,050  INFO [main] Userlove:39 - Url is opened -verifyUserloginwithINVALIDCredentials
+ 2026-01-05 17:20:23,319  INFO [main] Userlove:85 - Url is opened -verifyUserloginwithcorrectCredentials
+ 2026-01-05 17:23:17,323  INFO [main] Userlove:39 - Url is opened -verifyUserloginwithINVALIDCredentials
+ 2026-01-05 17:23:33,568  INFO [main] Userlove:85 - Url is opened -verifyUserloginwithcorrectCredentials
+ 2026-01-05 17:25:30,692  INFO [main] Userlove:39 - Url is opened -verifyUserloginwithINVALIDCredentials
+ 2026-01-05 17:25:46,988  INFO [main] Userlove:85 - Url is opened -verifyUserloginwithcorrectCredentials
+ 2026-01-05 17:28:40,591  INFO [main] Userlove:39 - Url is opened -verifyUserloginwithINVALIDCredentials
+ 2026-01-05 17:28:53,982  INFO [main] Userlove:61 - INVALIDtrue
+ 2026-01-05 17:28:56,811  INFO [main] Userlove:85 - Url is opened -verifyUserloginwithcorrectCredentials
  
